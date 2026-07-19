@@ -1,5 +1,6 @@
 import React from "react";
 import ScrollReveal from "./ScrollReveal";
+import coaching from "../assets/coaching.jpg";
 
 const EXPERTISE_CARDS = [
   {
@@ -102,7 +103,7 @@ export default function ExecutiveCoaching() {
                 <img
                   className="w-full h-full object-cover"
                   alt="Executive portrait of Dr. Krishan Singh"
-                  src="https://media.licdn.com/dms/image/v2/D5622AQFZswXDO_XHlw/feedshare-image-high-res/B56ZsbVjTXJoAo-/0/1765690194339?e=1785974400&v=beta&t=OjGEooRV6f_Et71b_5RERtScWxVpwIDqMONCDiRenfU"
+                  src={coaching}
                 />
               </div>
             </ScrollReveal>

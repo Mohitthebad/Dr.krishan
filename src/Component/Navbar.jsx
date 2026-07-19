@@ -77,7 +77,7 @@ export default function Navbar() {
           <img
             src={signatureImg}
             alt="Dr. Krishan Singh Signature"
-            className="h-10 md:h-12 w-auto object-contain transition-all duration-300"
+            className="h-15 md:h-15 w-auto object-contain transition-all duration-300"
             style={{
               filter: scrolled ? "invert(1)" : "none",
             }}

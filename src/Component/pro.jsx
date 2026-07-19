@@ -229,7 +229,7 @@ export default function ProjectsAndAwards() {
                     return (
                       <div
                         key={award.id}
-                        className={`absolute w-[300px] md:w-[400px] h-[260px] md:h-[320px] ${award.bg} rounded-lg shadow-2xl p-6 border-t-8 ${award.borderColor} flex flex-col justify-between`}
+                        className={`absolute w-[320px] md:w-[430px] h-[280px] md:h-[350px] ${award.bg} rounded-lg shadow-2xl p-6 border-t-8 ${award.borderColor} flex flex-col justify-between`}
                         style={{
                           ...style,
                           transition:
@@ -244,24 +244,24 @@ export default function ProjectsAndAwards() {
                             >
                               {award.icon}
                             </span>
-                            <span className="text-[10px] text-[#747878] font-bold">{award.year}</span>
+                            <span className="text-xs md:text-sm text-[#747878] font-bold">{award.year}</span>
                           </div>
                           <h3
                             style={{ fontFamily: "'Playfair Display', serif" }}
-                            className="text-black mb-2 text-xl font-semibold"
+                            className="text-black mb-2 text-2xl md:text-3xl font-semibold"
                           >
                             {award.title}
                           </h3>
-                          <p className="text-[#444748] text-sm">{award.text}</p>
+                          <p className="text-[#444748] text-base md:text-lg leading-relaxed">{award.text}</p>
                         </div>
                         <div className="border-t border-[#c4c7c7]/30 pt-4 flex justify-between items-center">
-                          <span className="text-[12px] text-black tracking-widest font-bold">
+                          <span className="text-sm md:text-base text-black tracking-widest font-bold">
                             {award.footer}
                           </span>
                           <div
-                            className={`w-8 h-8 rounded-full border ${award.accentBorder} flex items-center justify-center`}
+                            className={`w-9 h-9 md:w-10 h-10 rounded-full border ${award.accentBorder} flex items-center justify-center`}
                           >
-                            <span className={`material-symbols-outlined ${award.accent} text-sm`}>
+                            <span className={`material-symbols-outlined ${award.accent} text-sm md:text-base`}>
                               {award.footerIcon}
                             </span>
                           </div>
