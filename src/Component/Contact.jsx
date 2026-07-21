@@ -149,7 +149,7 @@ export default function Contact() {
                     <span className="material-symbols-outlined text-[#775a19]">location_on</span>
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-widest">
-                       House No. 254, Sector 10-A
+                       
                       </p>
                       <p className="text-[#444748] text-sm">Gurugram, Haryana</p>
                     </div>
@@ -187,22 +187,7 @@ export default function Contact() {
 
                   <div className="h-px bg-[#ffdea5] w-full" />
 
-                  <div className="flex flex-col gap-2">
-                    <h3
-                      style={{ fontFamily: "'Playfair Display', serif" }}
-                      className="text-xl font-semibold"
-                    >
-                      Regional Presence
-                    </h3>
-                    <ul className="flex flex-col gap-3">
-                      {REGIONS.map((region) => (
-                        <li key={region} className="text-[#444748] flex items-center">
-                          <span className="text-[#775a19] text-[0.6em] mr-3">◆</span>
-                          {region}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+               
                 </div>
               </ScrollReveal>
             </div>

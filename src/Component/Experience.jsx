@@ -1,6 +1,7 @@
 import React from "react";
 import ScrollReveal from "./ScrollReveal";
-import coaching from "../assets/coaching.jpg";
+import coaching from "../assets/coaching.png";
+import icfBadge from "../assets/icf-badge.jpg";
 
 const EXPERTISE_CARDS = [
   {
@@ -25,24 +26,29 @@ const EXPERTISE_CARDS = [
 
 const FRAMEWORKS = [
   {
-    icon: "360",
-    title: "360-Degree Feedback",
-    text: "Comprehensive leadership journeys powered by multi-dimensional performance feedback.",
+    icon: "verified",
+    title: "ICF Core Competencies",
+    text: "Structured journeys aligned with the International Coaching Federation's core competencies for maximum development.",
   },
   {
-    icon: "assignment_ind",
-    title: "Assessment Centres",
-    text: "Strategic leadership assessment centres and mentoring interventions for succession planning.",
-  },
-  {
-    icon: "schema",
-    title: "ICF Framework",
-    text: "Adherence to rigorous global coaching standards ensuring ethical and effective practice.",
+    icon: "trending_up",
+    title: "Coaching for High Potential Leaders",
+    text: "Targeted coaching designed to accelerate the growth of future executive and high-potential leadership.",
   },
   {
     icon: "psychology",
-    title: "HiPo Development",
-    text: "Structured programs designed specifically for high-potential executive growth.",
+    title: "Leadership Coaching",
+    text: "Empowering leaders with strategic clarity, emotional intelligence, and change capability.",
+  },
+  {
+    icon: "partner_exchange",
+    title: "Executive Coaching",
+    text: "Providing confidential, high-impact guidance for senior executives and C-suite leaders.",
+  },
+  {
+    icon: "policy",
+    title: "Coaching Aligned with ICF Ethics",
+    text: "A commitment to absolute confidentiality and the highest ethical standards of global coaching practice.",
   },
 ];
 
@@ -109,22 +115,14 @@ export default function ExecutiveCoaching() {
             </ScrollReveal>
             {/* ICF Badge Floating */}
             <ScrollReveal variant="scale-up" delay={450} className="absolute -bottom-10 -left-10">
-              <div
-                className={`${glassPanel} p-6 rounded-full shadow-2xl flex flex-col items-center justify-center w-40 h-40 border-[#775a19]/30`}
-              >
-              <span
-                className="material-symbols-outlined text-[#775a19] text-4xl mb-2"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                military_tech
-              </span>
-              <span className="text-[10px] text-center leading-tight text-black font-semibold">
-                ICF ACCREDITED
-                <br />
-                ASSOCIATE COACH (ACC)
-              </span>
-            </div>
-          </ScrollReveal>
+              <div className="w-40 h-40 rounded-full shadow-2xl overflow-hidden border border-white/30 bg-white/40 backdrop-blur-xl">
+                <img
+                  className="w-full h-full object-cover"
+                  alt="ICF Associate Certified Coach Badge"
+                  src={icfBadge}
+                />
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 

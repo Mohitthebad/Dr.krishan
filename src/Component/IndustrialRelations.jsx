@@ -5,31 +5,31 @@ import pens from "../assets/pens.png";
 
 const EXPERTISE_CARDS = [
   {
-    icon: "gavel",
-    title: "Strategy & Governance",
-    text: "Crafting robust frameworks for industrial compliance and long-term labor stability.",
-  },
-  {
     icon: "handshake",
-    title: "Trade Union Relations",
-    text: "Navigating complex union dynamics with a focus on mutual growth and dispute resolution.",
+    title: "Collaborative Partnerships",
+    text: "Transforming traditionally confrontational trade unions into collaborative partnerships aligned with mutual growth.",
   },
   {
-    icon: "payments",
-    title: "Wage Negotiations",
-    text: "Leading high-stakes collective bargaining to ensure fair outcomes and business continuity.",
+    icon: "groups",
+    title: "Management-Workforce Trust",
+    text: "Building robust, transparent bridges of trust and respect between management teams and the frontline workforce.",
   },
   {
-    icon: "crisis_alert",
-    title: "Crisis Management",
-    text: "Strategic strike prevention and rapid response to workplace industrial emergencies.",
+    icon: "gavel",
+    title: "Long-Term Harmony",
+    text: "Upholding complete industrial harmony and operational continuity, preventing potential strikes and work stoppages.",
+  },
+  {
+    icon: "volunteer_activism",
+    title: "Sustainable Employee Relations",
+    text: "Designing sustainable employee relations frameworks that promote long-term stability and workforce commitment.",
   },
 ];
 
 const METRICS = [
   { value: "100%", label: "Industrial Harmony Restored" },
-  { value: "LTS", label: "Long-Term Settlements Negotiated" },
-  { value: "7+", label: "Manufacturing Plants Optimized" },
+  { value: "75", label: "Wage & Bonus Settlements" },
+  { value: "48", label: "Long-Term Settlements" },
 ];
 
 const REDRESSAL_FOCUS = [
@@ -60,13 +60,11 @@ export default function IndustrialRelations() {
                   style={{ fontFamily: "'Playfair Display', serif" }}
                   className="text-[48px] font-bold mb-4 leading-none tracking-tight"
                 >
-                  Industrial Relations &amp; <br />
-                  HR Transformation
+                  Industrial Relations <br />
+                  Advisory
                 </h1>
                 <p className="text-lg text-[#444748] max-w-2xl leading-relaxed">
-                  Architecting harmony and productivity in complex industrial ecosystems. A
-                  legacy of bridging the gap between corporate strategy and frontline
-                  workforce dynamics.
+                  We help organizations improve productivity, streamline operations, and achieve measurable business outcomes across complex industrial ecosystems.
                 </p>
               </ScrollReveal>
             </div>
@@ -188,30 +186,7 @@ export default function IndustrialRelations() {
                 </div>
               </ScrollReveal>
 
-              {/* Editorial List: Grievance Redressal */}
-              <ScrollReveal variant="fade-up" delay={300}>
-                <div className="p-8 border border-[#c4c7c7]/20 bg-[#f5f3f3]">
-                  <h4
-                    style={{ fontFamily: "'Playfair Display', serif" }}
-                    className="text-xl font-semibold mb-6 border-b border-[#775a19]/30 pb-2"
-                  >
-                    Redressal Focus
-                  </h4>
-                  <ul className="space-y-4">
-                    {REDRESSAL_FOCUS.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <span
-                          className="material-symbols-outlined text-[#775a19] text-sm mt-1"
-                          style={{ fontVariationSettings: "'FILL' 1" }}
-                        >
-                          square
-                        </span>
-                        <span className="text-[#444748]">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </ScrollReveal>
+             
 
               {/* Image with Narrative */}
               <ScrollReveal variant="scale-up" delay={400}>

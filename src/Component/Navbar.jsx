@@ -3,8 +3,9 @@ import signatureImg from "../assets/signature.png";
 
 const NAV_ITEMS = [
   { label: "Overview", href: "#hero" },
-  { label: "Coaching", href: "#coaching" },
-  { label: "Industrial Relations", href: "#industrial-relations" },
+  { label: "Executive Coaching", href: "#coaching" },
+  { label: "Industrial Relations Advisory", href: "#industrial-relations" },
+  { label: "HR Advisory", href: "#hr-advisory" },
   { label: "Awards & Projects", href: "#awards" },
   { label: "Gallery", href: "#gallery" },
 ];
@@ -20,7 +21,7 @@ export default function Navbar() {
       setScrolled(y > 50);
 
       // Simple scroll spy logic
-      const sections = ["hero", "coaching", "industrial-relations", "awards", "gallery", "contact"];
+      const sections = ["hero", "coaching", "industrial-relations", "hr-advisory", "awards", "gallery", "contact"];
       let currentSection = "hero";
       
       for (const section of sections) {

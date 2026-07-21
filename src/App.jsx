@@ -3,6 +3,7 @@ import Navbar from './Component/Navbar'
 import Hero from './Component/Hero'
 import Experience from './Component/Experience'
 import IndustrialRelations from './Component/IndustrialRelations'
+import HRAdvisory from './Component/HRAdvisory'
 import Awards from './Component/pro'
 import Gal from './Component/Gal'
 import Contact from './Component/Contact'
@@ -28,6 +29,7 @@ const App = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
+      
     });
   };
 
@@ -51,6 +53,9 @@ const App = () => {
       </div>
       <div id="industrial-relations">
         <IndustrialRelations />
+      </div>
+      <div id="hr-advisory">
+        <HRAdvisory />
       </div>
       <div id="awards">
         <Awards />

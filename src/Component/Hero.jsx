@@ -95,8 +95,8 @@ export default function ExecutivePortfolio() {
                     style={{ fontFamily: "'Playfair Display', serif" }}
                     className="text-[32px] md:text-[44px] text-black leading-tight"
                   >
-                    Legacy of Strategic Leadership <br className="hidden lg:block" />
-                    &amp; Human Capital Excellence.
+                    Proven Leadership Backed by <br className="hidden lg:block" />
+                    Measurable Global Impact.
                   </h2>
                 </div>
               </ScrollReveal>
@@ -104,12 +104,10 @@ export default function ExecutivePortfolio() {
               <ScrollReveal variant="fade-up" delay={200}>
                 <div className="prose prose-lg max-w-none">
                   <p className="text-lg text-[#444748] mb-6 leading-relaxed">
-                    Dr. Krishan Singh is a transformative human resources executive with over
-                    three decades of experience leading large-scale organizational change, building
-                    high-performance cultures, and steering enterprises through complex industrial
-                    relations landscapes. His leadership philosophy blends strategic rigor with a
-                    deeply human-centric approach, empowering thousands of employees while guiding
-                    boards and executive teams through periods of significant transformation.
+                    With over three decades of leadership, Dr. Krishan Singh has delivered massive, measurable outcomes across complex global industries. He spearheaded the human capital infrastructure for a <strong>$1.2 Billion greenfield industrial facility</strong> from inception to full scale, successfully led cross-border HR integration for acquisitions across <strong>India, Dubai, Thailand, and South Africa</strong>, and digitized talent management systems for <strong>45,000+ employees</strong>.
+                  </p>
+                  <p className="text-lg text-[#444748] mb-6 leading-relaxed">
+                    A champion of organizational stability and business continuity, Dr. Singh has negotiated key long-term wage settlements and maintained <strong>100% industrial harmony</strong> across multiple high-stakes manufacturing plants.
                   </p>
                 </div>
               </ScrollReveal>
@@ -124,45 +122,66 @@ export default function ExecutivePortfolio() {
                     style={{ fontFamily: "'Playfair Display', serif" }}
                     className="text-2xl italic text-black leading-relaxed relative z-10"
                   >
-                    "Transforming organizational culture through strategic vision and
-                    human-centric leadership."
+                    "True leadership is measured not by consultant jargon, but by the tangible stability, growth, and alignment we bring to enterprises."
                   </blockquote>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal variant="fade-up" delay={400}>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mt-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mt-6">
                   <div>
                     <span
                       style={{ fontFamily: "'Playfair Display', serif" }}
-                      className="block text-5xl font-bold text-black"
+                      className="block text-4xl font-bold text-black"
                     >
                       <CountUp end={30} suffix="+" />
                     </span>
-                    <span className="text-xs text-[#444748] tracking-widest uppercase font-semibold">
+                    <span className="text-[10px] text-[#444748] tracking-widest uppercase font-semibold block mt-1">
                       Years Experience
                     </span>
                   </div>
                   <div>
                     <span
                       style={{ fontFamily: "'Playfair Display', serif" }}
-                      className="block text-5xl font-bold text-black"
+                      className="block text-4xl font-bold text-black"
                     >
-                      <CountUp end={4} suffix="k+" />
+                      <CountUp end={200} suffix="+" />
                     </span>
-                    <span className="text-xs text-[#444748] tracking-widest uppercase font-semibold">
-                      Employees Led
+                    <span className="text-[10px] text-[#444748] tracking-widest uppercase font-semibold block mt-1">
+                      Leaders Coached
                     </span>
                   </div>
-                  <div className="col-span-2 md:col-span-1">
+                  <div>
                     <span
                       style={{ fontFamily: "'Playfair Display', serif" }}
-                      className="block text-5xl font-bold text-black"
+                      className="block text-4xl font-bold text-black"
                     >
-                      <CountUp end={12} />
+                      <CountUp end={75} />
                     </span>
-                    <span className="text-xs text-[#444748] tracking-widest uppercase font-semibold">
-                      Global Awards
+                    <span className="text-[10px] text-[#444748] tracking-widest uppercase font-semibold block mt-1">
+                      Wage &amp; Bonus Settlements
+                    </span>
+                  </div>
+                  <div>
+                    <span
+                      style={{ fontFamily: "'Playfair Display', serif" }}
+                      className="block text-4xl font-bold text-black"
+                    >
+                      <CountUp end={48} />
+                    </span>
+                    <span className="text-[10px] text-[#444748] tracking-widest uppercase font-semibold block mt-1">
+                      Long-Term Settlements
+                    </span>
+                  </div>
+                  <div className="col-span-2 sm:col-span-1">
+                    <span
+                      style={{ fontFamily: "'Playfair Display', serif" }}
+                      className="block text-4xl font-bold text-[#775a19]"
+                    >
+                      Global
+                    </span>
+                    <span className="text-[10px] text-[#444748] tracking-widest uppercase font-semibold block mt-1">
+                      HR Integration (Thailand &amp; SA)
                     </span>
                   </div>
                 </div>
@@ -192,21 +211,37 @@ export default function ExecutivePortfolio() {
                   className="p-8 rounded-xl shadow-sm border border-[#c4c7c7]/20"
                 >
                   <h3 className="text-xs text-black tracking-widest mb-6 border-b border-[#c4c7c7]/30 pb-4 uppercase font-semibold">
-                    Core Expertise
+                    Consulting Verticals
                   </h3>
-                  <ul className="flex flex-col gap-4">
-                    {[
-                      "Strategic Change Management",
-                      "Organizational Culture Design",
-                      "Executive Talent Acquisition",
-                      "Digital HR Transformation",
-                    ].map((item) => (
-                      <li key={item} className="flex items-center gap-3">
+                  <div className="flex flex-col gap-5">
+                    <div>
+                      <h4 className="font-bold text-black text-sm flex items-center gap-2">
                         <span className="w-2 h-2 bg-[#775a19] rotate-45 shrink-0" />
-                        <span className="text-[#444748] font-medium">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                        Executive Coaching
+                      </h4>
+                      <p className="text-[#444748] text-xs mt-1 ml-4">
+                        Structured, ICF-accredited journeys for leaders and high-potentials.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-black text-sm flex items-center gap-2">
+                        <span className="w-2 h-2 bg-[#775a19] rotate-45 shrink-0" />
+                        Industrial Relations Advisory
+                      </h4>
+                      <p className="text-[#444748] text-xs mt-1 ml-4">
+                        Union dynamics, dispute resolutions, and long-term collective wage agreements.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-black text-sm flex items-center gap-2">
+                        <span className="w-2 h-2 bg-[#775a19] rotate-45 shrink-0" />
+                        HR Advisory
+                      </h4>
+                      <p className="text-[#444748] text-xs mt-1 ml-4">
+                        Billion-dollar greenfield setup, M&A integrations, and digital workforce transformation.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </ScrollReveal>
             </div>

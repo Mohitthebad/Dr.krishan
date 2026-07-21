@@ -15,6 +15,7 @@ const GALLERY_ITEMS = [
     src: gallery1,
     tag: "EXECUTIVE LEADERSHIP",
     caption: "Strategic oversight and leadership in action.",
+    position: "object-top",
   },
   {
     id: "summit",
@@ -24,6 +25,7 @@ const GALLERY_ITEMS = [
     src: gallery2,
     tag: "EXECUTIVE PORTRAIT",
     caption: "Dr. Krishan Singh, Transformative HR Leader.",
+    position: "object-top",
   },
   {
     id: "award",
@@ -33,15 +35,17 @@ const GALLERY_ITEMS = [
     src: gallery3,
     tag: "RECOGNITION",
     caption: "Honored at the annual business leadership summit.",
+    position: "object-center",
   },
   {
     id: "collaboration",
     aspect: "aspect-[3/4]",
     margin: "mt-[-40px]",
-    alt: "Dr. Krishan Singh with colleagues",
+    alt: "Dr. Krishan Singh corporate portrait",
     src: gallery4,
-    tag: "COLLABORATION",
-    caption: "Engaging with strategic partners and executive delegates.",
+    tag: "EXECUTIVE PORTRAIT",
+    caption: "Upholding values of excellence, innovation, and integrity.",
+    position: "object-top",
   },
 ];
 
@@ -71,7 +75,7 @@ function GalleryCard({ item }) {
     <ScrollReveal variant="scale-up" className={item.margin}>
       <div className="group relative overflow-hidden bg-[#efeded] shadow-sm">
         <img
-          className={`w-full ${item.aspect} object-cover transition-transform duration-700 group-hover:scale-105`}
+          className={`w-full ${item.aspect} object-cover ${item.position || "object-center"} transition-transform duration-700 group-hover:scale-105`}
           alt={item.alt}
           src={item.src}
         />
