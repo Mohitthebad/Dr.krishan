@@ -65,7 +65,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#fbf9f8]/90 backdrop-blur-md py-4 shadow-sm border-b border-[#c4c7c7]/20"
+          ? "bg-background-soft/90 backdrop-blur-md py-4 shadow-sm border-b border-border-light/20"
           : "bg-transparent py-6"
       }`}
     >
@@ -97,10 +97,10 @@ export default function Navbar() {
                 className={`text-xs tracking-wider font-semibold transition-all duration-300 uppercase relative py-1 ${
                   isActive
                     ? scrolled
-                      ? "text-[#775a19]"
-                      : "text-[#ffdea5]"
+                      ? "text-primary"
+                      : "text-accent"
                     : scrolled
-                    ? "text-[#444748] hover:text-[#775a19]"
+                    ? "text-charcoal/80 hover:text-primary"
                     : "text-white/70 hover:text-white"
                 }`}
               >
@@ -108,7 +108,7 @@ export default function Navbar() {
                 {isActive && (
                   <span
                     className={`absolute bottom-0 left-0 w-full h-[2px] ${
-                      scrolled ? "bg-[#775a19]" : "bg-[#ffdea5]"
+                      scrolled ? "bg-primary" : "bg-accent"
                     } transition-all duration-300`}
                   />
                 )}
@@ -120,7 +120,7 @@ export default function Navbar() {
             onClick={(e) => handleNavClick(e, "#contact")}
             className={`px-5 py-2.5 text-[10px] tracking-widest font-bold uppercase transition-all duration-300 border ${
               scrolled
-                ? "bg-black text-white border-black hover:bg-[#775a19] hover:border-[#775a19]"
+                ? "bg-black text-white border-black hover:bg-primary hover:border-primary"
                 : "bg-white text-black border-white hover:bg-transparent hover:text-white"
             }`}
           >
@@ -145,7 +145,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation Drawer */}
       <div
-        className={`fixed inset-0 top-[72px] bg-[#fbf9f8] z-40 lg:hidden transition-all duration-500 flex flex-col items-center justify-center gap-8 ${
+        className={`fixed inset-0 top-[72px] bg-background-soft z-40 lg:hidden transition-all duration-500 flex flex-col items-center justify-center gap-8 ${
           menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10 pointer-events-none"
         }`}
       >
@@ -157,7 +157,7 @@ export default function Navbar() {
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
               className={`text-lg tracking-widest font-semibold uppercase ${
-                isActive ? "text-[#775a19] scale-105" : "text-[#444748] hover:text-black"
+                isActive ? "text-primary scale-105" : "text-charcoal/80 hover:text-black"
               } transition-all`}
             >
               {item.label}
@@ -167,7 +167,7 @@ export default function Navbar() {
         <a
           href="#contact"
           onClick={(e) => handleNavClick(e, "#contact")}
-          className="px-8 py-3 bg-black text-white text-xs tracking-widest font-bold uppercase hover:bg-[#775a19] transition-all"
+          className="px-8 py-3 bg-black text-white text-xs tracking-widest font-bold uppercase hover:bg-primary transition-all"
         >
           Contact
         </a>

@@ -80,13 +80,13 @@ const glassPanel =
 
 export default function ExecutiveCoaching() {
   return (
-    <div className="font-sans text-base text-[#1b1c1c] bg-[#fbf9f8] overflow-x-hidden min-h-screen">
+    <div className="font-sans text-base text-charcoal bg-background-soft overflow-x-hidden min-h-screen">
       <main className="py-20 max-w-[1140px] mx-auto px-8 md:px-16">
         {/* Hero Section */}
         <section className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mb-20">
           <div className="md:col-span-7 flex flex-col gap-6">
             <ScrollReveal variant="fade-up">
-              <span className="text-xs font-semibold text-[#775a19] tracking-[0.2em]">
+              <span className="text-xs font-semibold text-accent tracking-[0.2em]">
                 EXECUTIVE COACH &amp; MENTOR
               </span>
               <h2
@@ -95,8 +95,8 @@ export default function ExecutiveCoaching() {
               >
                 Executive Coaching &amp; Mentorship
               </h2>
-              <div className="w-24 h-1 bg-[#775a19] mt-4" />
-              <blockquote className="italic text-2xl font-semibold text-[#444748] border-l-4 border-[#c4c7c7] pl-6 my-6">
+              <div className="w-24 h-1 bg-primary mt-4" />
+              <blockquote className="italic text-2xl font-semibold text-charcoal/80 border-l-4 border-border-light pl-6 my-6">
                 "Every individual possesses the ability to discover solutions through
                 reflection, awareness, and purposeful action. My role is to bridge the gap
                 between theory and real organizational impact."
@@ -128,20 +128,20 @@ export default function ExecutiveCoaching() {
 
         {/* Expertise Sections: Bento Grid */}
         <section className="mb-20">
-          <div className="flex items-center justify-between mb-6 border-b border-[#c4c7c7]/20 pb-4">
+          <div className="flex items-center justify-between mb-6 border-b border-border-light/20 pb-4">
             <h3
               style={{ fontFamily: "'Playfair Display', serif" }}
               className="text-2xl font-semibold"
             >
               Coaching Expertise
             </h3>
-            <span className="text-xs font-semibold text-[#444748]">01 / AREAS OF IMPACT</span>
+            <span className="text-xs font-semibold text-charcoal/70">01 / AREAS OF IMPACT</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {EXPERTISE_CARDS.map((card, idx) => (
               <ScrollReveal key={card.title} variant="fade-up" delay={idx * 150}>
-                <div className={`${glassPanel} p-6 flex flex-col gap-4 hover:border-[#775a19] group h-full`}>
-                  <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center group-hover:bg-[#775a19] transition-colors">
+                <div className={`${glassPanel} p-6 flex flex-col gap-4 hover:border-primary group h-full`}>
+                  <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
                     <span className="material-symbols-outlined text-white">{card.icon}</span>
                   </div>
                   <h4
@@ -150,11 +150,11 @@ export default function ExecutiveCoaching() {
                   >
                     {card.title}
                   </h4>
-                  <p className="text-[#444748]">{card.text}</p>
+                  <p className="text-charcoal/80">{card.text}</p>
                   <ul className="mt-auto pt-4 space-y-2">
                     {card.tags.map((tag) => (
                       <li key={tag} className="flex items-center gap-2 text-[11px] font-semibold">
-                        <span className="w-1.5 h-1.5 bg-[#775a19] rounded-sm" /> {tag}
+                        <span className="w-1.5 h-1.5 bg-primary rounded-sm" /> {tag}
                       </li>
                     ))}
                   </ul>
@@ -174,7 +174,7 @@ export default function ExecutiveCoaching() {
               >
                 Methodology &amp; Frameworks
               </h3>
-              <p className="text-[#858383]">
+              <p className="text-border-light/70">
                 Rooted in the gold standard of the International Coaching Federation (ICF),
                 Dr. Singh leverages data-driven insights to spark transformation.
               </p>
@@ -184,12 +184,12 @@ export default function ExecutiveCoaching() {
             {FRAMEWORKS.map((fw, idx) => (
               <ScrollReveal key={fw.title} variant="fade-up" delay={idx * 100}>
                 <div className="flex items-start gap-4">
-                  <span className="material-symbols-outlined text-[#775a19] text-3xl">
+                  <span className="material-symbols-outlined text-primary text-3xl">
                     {fw.icon}
                   </span>
                   <div>
                     <h5 className="font-bold text-black mb-1">{fw.title}</h5>
-                    <p className="text-[#444748] text-sm">{fw.text}</p>
+                    <p className="text-charcoal/80 text-sm">{fw.text}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -202,14 +202,14 @@ export default function ExecutiveCoaching() {
           {/* Main Foundation */}
           <div className="md:col-span-8">
             <ScrollReveal variant="fade-up">
-              <div className="flex items-center justify-between mb-6 border-b border-[#c4c7c7]/20 pb-4">
+              <div className="flex items-center justify-between mb-6 border-b border-border-light/20 pb-4">
                 <h3
                   style={{ fontFamily: "'Playfair Display', serif" }}
                   className="text-2xl font-semibold"
                 >
                   Professional Certifications
                 </h3>
-                <span className="text-xs font-semibold text-[#444748]">02 / QUALIFICATIONS</span>
+                <span className="text-xs font-semibold text-charcoal/70">02 / QUALIFICATIONS</span>
               </div>
             </ScrollReveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -217,12 +217,12 @@ export default function ExecutiveCoaching() {
                 <ScrollReveal key={cert.title} variant="scale-up" delay={idx * 100}>
                   <div
                     className={`p-4 border-l h-full ${
-                      cert.accent ? "border-[#775a19]" : "border-[#c4c7c7]"
-                    } bg-[#f5f3f3]`}
+                      cert.accent ? "border-primary" : "border-border-light"
+                    } bg-border-light/20`}
                   >
                     <span
                       className={`font-bold text-xs uppercase tracking-widest block mb-1 ${
-                        cert.accent ? "text-[#775a19]" : "text-[#444748]"
+                        cert.accent ? "text-primary" : "text-charcoal/70"
                       }`}
                     >
                       {cert.label}
@@ -242,7 +242,7 @@ export default function ExecutiveCoaching() {
                   style={{ fontFamily: "'Playfair Display', serif" }}
                   className="text-xl font-semibold mb-6 flex items-center gap-2"
                 >
-                  <span className="material-symbols-outlined text-[#775a19]">school</span>
+                  <span className="material-symbols-outlined text-primary">school</span>
                   Academic Foundation
                 </h3>
                 <div className="space-y-6">
@@ -250,10 +250,10 @@ export default function ExecutiveCoaching() {
                     <React.Fragment key={item.title}>
                       <div>
                         <p className="font-bold text-black">{item.title}</p>
-                        <p className="text-sm text-[#444748]">{item.sub}</p>
+                        <p className="text-sm text-charcoal/80">{item.sub}</p>
                       </div>
                       {i < ACADEMICS.length - 1 && (
-                        <div className="h-px bg-[#c4c7c7]/30 w-full" />
+                        <div className="h-px bg-border-light/30 w-full" />
                       )}
                     </React.Fragment>
                   ))}

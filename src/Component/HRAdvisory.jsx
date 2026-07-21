@@ -106,12 +106,12 @@ function MouseFollowCard({ children, className = "" }) {
 
 export default function HRAdvisory() {
   return (
-    <div className="font-sans text-base text-[#1b1c1c] bg-[#fbf9f8] overflow-x-hidden py-20">
+    <div className="font-sans text-base text-charcoal bg-background-soft overflow-x-hidden py-20">
       <main className="max-w-[1140px] mx-auto px-8 md:px-16">
         <ScrollReveal variant="fade-up">
-          <div className="flex items-center justify-between mb-12 border-b border-[#c4c7c7]/20 pb-4">
+          <div className="flex items-center justify-between mb-12 border-b border-border-light/20 pb-4">
             <div>
-              <span className="text-xs font-semibold text-[#775a19] tracking-[0.2em] uppercase">
+              <span className="text-xs font-semibold text-accent tracking-[0.2em] uppercase">
                 EXECUTIVE VERTICAL
               </span>
               <h2
@@ -121,7 +121,7 @@ export default function HRAdvisory() {
                 HR Advisory
               </h2>
             </div>
-            <span className="text-xs font-semibold text-[#444748] uppercase hidden sm:inline">
+            <span className="text-xs font-semibold text-charcoal/70 uppercase hidden sm:inline">
               03 / Human Capital Strategy
             </span>
           </div>
@@ -131,27 +131,27 @@ export default function HRAdvisory() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {INITIATIVES.map((init, idx) => (
             <ScrollReveal key={init.title} variant="scale-up" delay={idx * 100}>
-              <MouseFollowCard className="p-8 rounded-lg shadow-sm border border-white/30 bg-white/40 backdrop-blur-xl hover:shadow-md hover:border-[#775a19] transition-all duration-300 group h-full">
+              <MouseFollowCard className="p-8 rounded-lg shadow-sm border border-white/30 bg-white/40 backdrop-blur-xl hover:shadow-md hover:border-primary transition-all duration-300 group h-full">
                 <div>
                   <div className="flex justify-between items-start mb-6">
-                    <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center group-hover:bg-[#775a19] transition-colors duration-300">
+                    <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
                       <span className="material-symbols-outlined text-white text-2xl">{init.icon}</span>
                     </div>
-                    <span className="text-[10px] tracking-widest font-bold uppercase text-[#775a19] bg-[#775a19]/10 px-3 py-1 rounded-full">
+                    <span className="text-[10px] tracking-widest font-bold uppercase text-primary bg-primary/10 px-3 py-1 rounded-full">
                       {init.highlight}
                     </span>
                   </div>
                   <h3
                     style={{ fontFamily: "'Playfair Display', serif" }}
-                    className="text-2xl font-bold mb-3 group-hover:text-[#775a19] transition-colors"
+                    className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors"
                   >
                     {init.title}
                   </h3>
-                  <p className="text-[#444748] leading-relaxed text-sm">
+                  <p className="text-charcoal/80 leading-relaxed text-sm">
                     {init.text}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[#c4c7c7]/20 flex items-center justify-between text-[#775a19] text-xs font-bold tracking-widest group-hover:translate-x-2 transition-transform duration-300">
+                <div className="mt-6 pt-4 border-t border-border-light/20 flex items-center justify-between text-primary text-xs font-bold tracking-widest group-hover:translate-x-2 transition-transform duration-300">
                   <span>LEARN MORE</span>
                   <span className="material-symbols-outlined text-sm">arrow_forward</span>
                 </div>

@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #0F5C5E; /* Deep Teal */
+  --color-secondary: #1E3A8A; /* Royal Blue */
+  --color-accent: #D4AF37; /* Champagne Gold */
+  --color-background-soft: #F8FAFC; /* Soft White */
+  --color-charcoal: #1F2937; /* Charcoal */
+  --color-border-light: #E5E7EB; /* Light Gray */
+}

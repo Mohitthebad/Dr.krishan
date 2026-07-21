@@ -34,10 +34,10 @@ const App = () => {
   };
 
   return (
-    <div className="relative bg-[#fbf9f8] min-h-screen text-[#1b1c1c]">
+    <div className="relative bg-background-soft min-h-screen text-charcoal">
       {/* Scroll Progress Bar */}
       <div 
-        className="fixed top-0 left-0 h-[3px] bg-[#775a19] z-[60] transition-all duration-100"
+        className="fixed top-0 left-0 h-[3px] bg-primary z-[60] transition-all duration-100"
         style={{ width: `${scrollProgress}%` }}
       />
 
@@ -71,7 +71,7 @@ const App = () => {
       {/* Circular Back to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg border border-[#c4c7c7]/20 transition-all duration-500 cursor-pointer active:scale-95 ${
+        className={`fixed bottom-8 right-8 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg border border-border-light/20 transition-all duration-500 cursor-pointer active:scale-95 ${
           showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
         }`}
       >
@@ -88,7 +88,7 @@ const App = () => {
             cx="24"
             cy="24"
             r="20"
-            className="stroke-[#775a19] fill-none transition-all duration-100"
+            className="stroke-primary fill-none transition-all duration-100"
             strokeWidth="2"
             strokeDasharray={2 * Math.PI * 20}
             strokeDashoffset={2 * Math.PI * 20 * (1 - scrollProgress / 100)}

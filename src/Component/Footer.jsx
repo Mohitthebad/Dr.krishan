@@ -12,7 +12,7 @@ function FooterLinkList({ items, className = "" }) {
           <a
             key={item}
             href="#"
-            className="text-[#444748] hover:text-[#775a19] transition-colors flex items-center gap-2"
+            className="text-charcoal/80 hover:text-primary transition-colors flex items-center gap-2"
           >
             {item}
           </a>
@@ -22,7 +22,7 @@ function FooterLinkList({ items, className = "" }) {
             href={item.href || "#"}
             target={item.external ? "_blank" : undefined}
             rel={item.external ? "noreferrer" : undefined}
-            className="text-[#444748] hover:text-[#775a19] transition-colors flex items-center gap-2"
+            className="text-charcoal/80 hover:text-primary transition-colors flex items-center gap-2"
           >
             {item.label}
           </a>
@@ -40,7 +40,7 @@ export default function Footer({
   year = new Date().getFullYear(),
 }) {
   return (
-    <footer className="bg-[#f5f3f3] border-t border-[#c4c7c7]/30 w-full mt-20">
+    <footer className="bg-border-light/20 border-t border-border-light/30 w-full mt-20">
       <div className=" max-w-[1140px] mx-auto px-8 md:px-16 py-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start mb-12">
           <div className="md:col-span-5">
@@ -52,26 +52,26 @@ export default function Footer({
                 filter: "invert(1)",
               }}
             />
-            <p className="text-[#444748] max-w-sm leading-relaxed">{description}</p>
+            <p className="text-charcoal/80 max-w-sm leading-relaxed">{description}</p>
           </div>
 
           <div className="md:col-span-3">
-            <h4 className="text-xs text-[#775a19] tracking-widest mb-6 uppercase font-semibold">
+            <h4 className="text-xs text-accent tracking-widest mb-6 uppercase font-semibold">
               Navigation
             </h4>
             <FooterLinkList items={navLinks} />
           </div>
 
           <div className="md:col-span-4">
-            <h4 className="text-xs text-[#775a19] tracking-widest mb-6 uppercase font-semibold">
+            <h4 className="text-xs text-accent tracking-widest mb-6 uppercase font-semibold">
               Connect
             </h4>
             <FooterLinkList items={connectLinks} />
           </div>
         </div>
 
-        <div className="pt-8 border-t border-[#c4c7c7]/20 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[#444748] text-sm">
+        <div className="pt-8 border-t border-border-light/20 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-charcoal/80 text-sm">
             © {year} {name}. All Rights Reserved.
           </p>
           <div className="flex items-center gap-[8px] md:gap-[10px] p-[6px_10px] md:p-[8px_12px] border border-black/10 rounded-[10px] w-fit bg-black/5 backdrop-blur-[10px]">

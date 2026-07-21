@@ -46,14 +46,14 @@ const glassEffect =
 
 export default function IndustrialRelations() {
   return (
-    <div className="bg-[#fbf9f8] text-[#1b1c1c] font-sans selection:bg-[#775a19]/20 min-h-screen">
+    <div className="bg-background-soft text-charcoal font-sans selection:bg-primary/20 min-h-screen">
       <main className="py-20 px-8 md:px-16 max-w-[1140px] mx-auto">
         {/* Hero Section */}
         <section className="mb-20">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-8 flex flex-col justify-center">
               <ScrollReveal variant="fade-up">
-                <span className="text-[#775a19] text-xs font-semibold mb-2 block">
+                <span className="text-accent text-xs font-semibold mb-2 block">
                   EXECUTIVE FOCUS
                 </span>
                 <h1
@@ -63,7 +63,7 @@ export default function IndustrialRelations() {
                   Industrial Relations <br />
                   Advisory
                 </h1>
-                <p className="text-lg text-[#444748] max-w-2xl leading-relaxed">
+                <p className="text-lg text-charcoal/80 max-w-2xl leading-relaxed">
                   We help organizations improve productivity, streamline operations, and achieve measurable business outcomes across complex industrial ecosystems.
                 </p>
               </ScrollReveal>
@@ -76,15 +76,15 @@ export default function IndustrialRelations() {
                   </div>
                   <h3
                     style={{ fontFamily: "'Playfair Display', serif" }}
-                    className="text-lg font-bold text-[#775a19] mb-4"
+                    className="text-lg font-bold text-primary mb-4"
                   >
                     Redressal Focus
                   </h3>
                   <ul className="space-y-3">
                     {REDRESSAL_FOCUS.map((item) => (
                       <li key={item} className="flex items-center gap-3">
-                        <span className="w-1.5 h-1.5 bg-[#775a19] rotate-45 shrink-0" />
-                        <span className="text-[#444748] font-medium text-sm">{item}</span>
+                        <span className="w-1.5 h-1.5 bg-primary rotate-45 shrink-0" />
+                        <span className="text-charcoal/80 font-medium text-sm">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -101,7 +101,7 @@ export default function IndustrialRelations() {
             <ScrollReveal variant="fade-up">
               <h2
                 style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-2xl font-semibold mb-6 border-b border-[#c4c7c7]/30 pb-4"
+                className="text-2xl font-semibold mb-6 border-b border-border-light/30 pb-4"
               >
                 Core Expertise
               </h2>
@@ -109,9 +109,9 @@ export default function IndustrialRelations() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {EXPERTISE_CARDS.map((card, idx) => (
                 <ScrollReveal key={card.title} variant="fade-up" delay={idx * 100}>
-                  <div className="bg-white p-8 border border-[#c4c7c7]/10 shadow-sm hover:shadow-md transition-shadow h-full">
-                    <div className="w-12 h-12 bg-[#775a19]/10 flex items-center justify-center mb-4">
-                      <span className="material-symbols-outlined text-[#775a19]">{card.icon}</span>
+                  <div className="bg-white p-8 border border-border-light/10 shadow-sm hover:shadow-md transition-shadow h-full">
+                    <div className="w-12 h-12 bg-primary/10 flex items-center justify-center mb-4">
+                      <span className="material-symbols-outlined text-primary">{card.icon}</span>
                     </div>
                     <h4
                       style={{ fontFamily: "'Playfair Display', serif" }}
@@ -119,7 +119,7 @@ export default function IndustrialRelations() {
                     >
                       {card.title}
                     </h4>
-                    <p className="text-[#444748]">{card.text}</p>
+                    <p className="text-charcoal/80">{card.text}</p>
                   </div>
                 </ScrollReveal>
               ))}
@@ -127,7 +127,7 @@ export default function IndustrialRelations() {
               {/* Full Width Achievement Highlight */}
               <div className="col-span-1 md:col-span-2">
                 <ScrollReveal variant="scale-up" delay={200}>
-                  <div className={`${glassEffect} p-10 border border-[#c4c7c7]/20 relative`}>
+                  <div className={`${glassEffect} p-10 border border-border-light/20 relative`}>
                     <div className="flex flex-col md:flex-row items-center gap-6">
                       <div className="text-center md:text-left">
                         <h3
@@ -136,7 +136,7 @@ export default function IndustrialRelations() {
                         >
                           Global Operations
                         </h3>
-                        <p className="text-lg text-[#444748] mb-4">
+                        <p className="text-lg text-charcoal/80 mb-4">
                           Successfully led HR integration of acquired businesses across India,
                           Dubai, Thailand, and South Africa, harmonizing diverse cultures and
                           governance frameworks.
@@ -145,7 +145,7 @@ export default function IndustrialRelations() {
                           {REGIONS.map((region) => (
                             <span
                               key={region}
-                              className="px-4 py-1 bg-[#e4e2e2] text-xs font-semibold rounded-full text-[#775a19]"
+                              className="px-4 py-1 bg-border-light text-xs font-semibold rounded-full text-primary"
                             >
                               {region}
                             </span>
@@ -165,7 +165,7 @@ export default function IndustrialRelations() {
               {/* Performance Metrics */}
               <ScrollReveal variant="fade-up" delay={200}>
                 <div className="bg-black p-8 text-white shadow-xl">
-                  <span className="text-[#e9c176] text-xs font-semibold tracking-widest block mb-4 uppercase">
+                  <span className="text-accent text-xs font-semibold tracking-widest block mb-4 uppercase">
                     Proven Impact
                   </span>
                   <div className="space-y-6">
@@ -173,11 +173,11 @@ export default function IndustrialRelations() {
                       <div key={m.label} className={i > 0 ? "border-t border-white/20 pt-6" : ""}>
                         <h4
                           style={{ fontFamily: "'Playfair Display', serif" }}
-                          className="text-[40px] font-bold leading-none text-[#ffdea5]"
+                          className="text-[40px] font-bold leading-none text-accent"
                         >
                           {m.value}
                         </h4>
-                        <p className="text-xs font-semibold text-[#858383] uppercase tracking-widest mt-1">
+                        <p className="text-xs font-semibold text-white/60 uppercase tracking-widest mt-1">
                           {m.label}
                         </p>
                       </div>
@@ -208,7 +208,7 @@ export default function IndustrialRelations() {
         </section>
 
         {/* Case Study Highlight */}
-        <section className="mt-20 pt-20 border-t border-[#c4c7c7]/30">
+        <section className="mt-20 pt-20 border-t border-border-light/30">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="md:w-1/2">
               <ScrollReveal variant="slide-left">
@@ -218,21 +218,21 @@ export default function IndustrialRelations() {
                 >
                   Strategic Resolution &amp; Settlements
                 </h2>
-                <p className="text-lg text-[#444748] mb-6 leading-relaxed">
+                <p className="text-lg text-charcoal/80 mb-6 leading-relaxed">
                   Dr. Singh has successfully negotiated complex long-term settlements,
                   resolved major industrial disputes, and extinguished potential strikes
                   before they impacted production. By establishing unified compliance
                   governance across multiple manufacturing units, he minimized corporate
                   risk while strengthening business continuity in volatile markets.
                 </p>
-                <button className="bg-black text-white px-8 py-3 text-xs font-semibold tracking-widest flex items-center gap-2 hover:bg-[#775a19] transition-colors">
+                <button className="bg-black text-white px-8 py-3 text-xs font-semibold tracking-widest flex items-center gap-2 hover:bg-primary transition-colors">
                   VIEW LEADERSHIP HISTORY
                   <span className="material-symbols-outlined text-sm">arrow_forward</span>
                 </button>
               </ScrollReveal>
             </div>
             <div className="md:w-1/2 grid grid-cols-2 gap-4">
-              <div className="aspect-square bg-[#efeded] relative group overflow-hidden">
+              <div className="aspect-square bg-border-light/20 relative group overflow-hidden">
                 <ScrollReveal variant="scale-up" delay={200} className="w-full h-full">
                   <img
                     className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
@@ -241,7 +241,7 @@ export default function IndustrialRelations() {
                   />
                 </ScrollReveal>
               </div>
-              <div className="aspect-square bg-[#efeded] relative group overflow-hidden mt-8">
+              <div className="aspect-square bg-border-light/20 relative group overflow-hidden mt-8">
                 <ScrollReveal variant="scale-up" delay={400} className="w-full h-full">
                   <img
                     className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"

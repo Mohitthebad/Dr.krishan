@@ -73,14 +73,14 @@ const MILESTONES = [
 function GalleryCard({ item }) {
   return (
     <ScrollReveal variant="scale-up" className={item.margin}>
-      <div className="group relative overflow-hidden bg-[#efeded] shadow-sm">
+      <div className="group relative overflow-hidden bg-border-light/20 shadow-sm">
         <img
           className={`w-full ${item.aspect} object-cover ${item.position || "object-center"} transition-transform duration-700 group-hover:scale-105`}
           alt={item.alt}
           src={item.src}
         />
         <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-          <span className="text-xs tracking-widest font-semibold text-[#ffdea5]">
+          <span className="text-xs tracking-widest font-semibold text-accent">
             {item.tag}
           </span>
           <p className="text-white mt-1">{item.caption}</p>
@@ -97,7 +97,7 @@ export default function ExecutiveGallery() {
   };
 
   return (
-    <div className="bg-[#fbf9f8] text-[#1b1c1c] font-sans overflow-x-hidden min-h-screen">
+    <div className="bg-background-soft text-charcoal font-sans overflow-x-hidden min-h-screen">
       {/* Hero Section */}
       <section id="overview" className="py-20 px-8 md:px-16 max-w-[1440px] mx-auto">
         <ScrollReveal variant="fade-up">
@@ -108,7 +108,7 @@ export default function ExecutiveGallery() {
             >
               Visual Legacy
             </h1>
-            <p className="text-lg text-[#444748] max-w-2xl leading-relaxed">
+            <p className="text-lg text-charcoal/80 max-w-2xl leading-relaxed">
               A curated selection of moments capturing decades of strategic leadership,
               global summits, and the pursuit of excellence in the executive landscape.
             </p>
@@ -135,7 +135,7 @@ export default function ExecutiveGallery() {
                 backdropFilter: "saturate(180%) blur(20px)",
                 backgroundColor: "rgba(255,255,255,0.7)",
               }}
-              className="sticky top-32 p-6 border border-l border-[#c4c7c7]/10"
+              className="sticky top-32 p-6 border border-l border-border-light/10"
             >
               <ScrollReveal variant="fade-up">
                 <h2
@@ -150,15 +150,15 @@ export default function ExecutiveGallery() {
                   <ScrollReveal key={m.year} variant="fade-up" delay={idx * 100}>
                     <div className="flex gap-4">
                       <div className="flex flex-col items-center">
-                        <div className="w-2 h-2 rounded-full bg-[#775a19] mt-2 shrink-0" />
+                        <div className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
                         <div className={`w-px bg-black/10 ${m.rail}`} />
                       </div>
                       <div>
-                        <span className="text-xs tracking-widest font-semibold text-[#775a19]">
+                        <span className="text-xs tracking-widest font-semibold text-primary">
                           {m.year}
                         </span>
                         <h3 className="text-lg font-bold text-black">{m.title}</h3>
-                        <p className="text-[#444748]">{m.text}</p>
+                        <p className="text-charcoal/80">{m.text}</p>
                       </div>
                     </div>
                   </ScrollReveal>
@@ -167,27 +167,27 @@ export default function ExecutiveGallery() {
 
               {/* Metric Chips */}
               <ScrollReveal variant="fade-up" delay={150}>
-                <div className="mt-20 p-6 bg-[#ffdea5]/30 border border-[#775a19]/20 rounded-lg">
+                <div className="mt-20 p-6 bg-accent/15 border border-primary/20 rounded-lg">
                   <div
                     style={{ fontFamily: "'Playfair Display', serif" }}
-                    className="text-3xl font-semibold text-[#775a19]"
+                    className="text-3xl font-semibold text-primary"
                   >
                     <CountUp end={30} suffix="+" />
                   </div>
-                  <div className="text-xs uppercase tracking-widest font-semibold text-[#5d4201]">
+                  <div className="text-xs uppercase tracking-widest font-semibold text-accent">
                     Years of Executive Authority
                   </div>
                 </div>
               </ScrollReveal>
               <ScrollReveal variant="fade-up" delay={250}>
-                <div className="mt-6 p-6 bg-[#1c1b1b] text-[#858383] rounded-lg">
+                <div className="mt-6 p-6 bg-charcoal text-border-light/70 rounded-lg">
                   <div
                     style={{ fontFamily: "'Playfair Display', serif" }}
-                    className="text-3xl font-semibold text-[#fbf9f8]"
+                    className="text-3xl font-semibold text-background-soft"
                   >
                     <CountUp end={4400} suffix="+" />
                   </div>
-                  <div className="text-xs uppercase tracking-widest font-semibold text-[#858383]">
+                  <div className="text-xs uppercase tracking-widest font-semibold text-border-light/60">
                     Global Employees Managed
                   </div>
                 </div>

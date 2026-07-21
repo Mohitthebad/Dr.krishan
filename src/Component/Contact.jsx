@@ -24,7 +24,7 @@ function Field({ label, children }) {
       <label
         className="text-xs font-semibold uppercase tracking-widest transition-all duration-200"
         style={{
-          color: active ? "#775a19" : "rgba(68,71,72,0.7)",
+          color: active ? "#0F5C5E" : "rgba(31,41,55,0.7)",
           transform: active ? "translateY(-2px)" : "translateY(0)",
         }}
       >
@@ -48,13 +48,13 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-[#fbf9f8] text-[#1b1c1c] font-sans overflow-x-hidden min-h-screen">
+    <div className="bg-background-soft text-charcoal font-sans overflow-x-hidden min-h-screen">
       <main className="py-20 max-w-[1140px] mx-auto px-8 md:px-16">
         {/* Hero Section */}
         <section className="mb-20">
           <ScrollReveal variant="fade-up">
             <div className="flex flex-col gap-2 mb-6">
-              <span className="text-xs font-semibold text-[#775a19] tracking-[0.2em] uppercase">
+              <span className="text-xs font-semibold text-accent tracking-[0.2em] uppercase">
                 DIRECT ACCESS
               </span>
               <h1
@@ -63,7 +63,7 @@ export default function Contact() {
               >
                 Get in Touch
               </h1>
-              <p className="text-lg text-[#444748] max-w-2xl mt-4">
+              <p className="text-lg text-charcoal/80 max-w-2xl mt-4">
                 Dr. Krishan Singh welcomes inquiries regarding executive consulting, board
                 membership, and strategic leadership mentorship. Experience a bespoke
                 concierge approach to professional partnership.
@@ -80,14 +80,14 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <Field label="Full Name">
                       <input
-                        className="bg-transparent border-0 border-b border-[#c4c7c7] py-4 focus:ring-0 focus:border-[#775a19] transition-all text-lg placeholder:text-[#c4c7c7]"
+                        className="bg-transparent border-0 border-b border-border-light py-4 focus:ring-0 focus:border-primary transition-all text-lg placeholder:text-charcoal/40"
                         placeholder="Johnathan Doe"
                         type="text"
                       />
                     </Field>
                     <Field label="Organization">
                       <input
-                        className="bg-transparent border-0 border-b border-[#c4c7c7] py-4 focus:ring-0 focus:border-[#775a19] transition-all text-lg placeholder:text-[#c4c7c7]"
+                        className="bg-transparent border-0 border-b border-border-light py-4 focus:ring-0 focus:border-primary transition-all text-lg placeholder:text-charcoal/40"
                         placeholder="Global Enterprises Inc."
                         type="text"
                       />
@@ -96,14 +96,14 @@ export default function Contact() {
 
                   <Field label="Email Address">
                     <input
-                      className="bg-transparent border-0 border-b border-[#c4c7c7] py-4 focus:ring-0 focus:border-[#775a19] transition-all text-lg placeholder:text-[#c4c7c7]"
+                      className="bg-transparent border-0 border-b border-border-light py-4 focus:ring-0 focus:border-primary transition-all text-lg placeholder:text-charcoal/40"
                       placeholder="j.doe@executive.com"
                       type="email"
                     />
                   </Field>
 
                   <Field label="Inquiry Type">
-                    <select className="bg-transparent border-0 border-b border-[#c4c7c7] py-4 focus:ring-0 focus:border-[#775a19] transition-all text-lg text-[#444748] appearance-none">
+                    <select className="bg-transparent border-0 border-b border-border-light py-4 focus:ring-0 focus:border-primary transition-all text-lg text-charcoal/80 appearance-none">
                       <option>Executive Leadership Consulting</option>
                       <option>Board Membership Opportunity</option>
                       <option>Keynote Speaking &amp; Panels</option>
@@ -113,7 +113,7 @@ export default function Contact() {
 
                   <Field label="Your Message">
                     <textarea
-                      className="bg-transparent border-0 border-b border-[#c4c7c7] py-4 focus:ring-0 focus:border-[#775a19] transition-all text-lg placeholder:text-[#c4c7c7] resize-none"
+                      className="bg-transparent border-0 border-b border-border-light py-4 focus:ring-0 focus:border-primary transition-all text-lg placeholder:text-charcoal/40 resize-none"
                       placeholder="How can we collaborate on your vision?"
                       rows="4"
                     />
@@ -122,7 +122,7 @@ export default function Contact() {
                   <div className="mt-6">
                     <button
                       type="submit"
-                      className="bg-black text-[#ffdea5] text-xs font-semibold px-12 py-5 tracking-[0.2em] uppercase hover:shadow-[0px_20px_40px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all active:scale-95 cursor-pointer"
+                      className="bg-black text-accent text-xs font-semibold px-12 py-5 tracking-[0.2em] uppercase hover:shadow-[0px_20px_40px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all active:scale-95 cursor-pointer"
                     >
                       SEND MESSAGE
                     </button>
@@ -135,7 +135,7 @@ export default function Contact() {
             <div className="lg:col-span-5 flex flex-col gap-8">
               {/* Glass Interactive Map */}
               <ScrollReveal variant="scale-up" delay={200}>
-                <div className="relative group overflow-hidden h-[300px] w-full rounded-xl bg-[#eae8e7] border border-[#c4c7c7]/30 flex items-center justify-center shadow-sm">
+                <div className="relative group overflow-hidden h-[300px] w-full rounded-xl bg-border-light/20 border border-border-light/30 flex items-center justify-center shadow-sm">
                   <div
                     className="absolute inset-0 grayscale contrast-125 opacity-50 transition-all duration-700 group-hover:scale-110 group-hover:opacity-70 bg-cover bg-center"
                     style={{
@@ -143,23 +143,13 @@ export default function Contact() {
                         "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBhQDX3OQNaT4JoGW_G2TtHC3aS6iZLc5QBlQ7NiI4EDJULU9I5DpiPF9xTP_oW4h0uJ-2wMvIiBIbx1hre7d-gk7bm7zAjN-f-rXcRZFwZItkHmMZsKLe85CpnCr7DLD7Yhxgq7_N2IuBpzGlMAkn3k-Yf8HGOLx46MCveHa1JuLHZnM_-rfpEGqqHdHG1nclre-2u-Ak2Pp-sX9qEz-YmYhoNkYytpexKxCtLNBVQe1-jXb802tm9nJYq3rw4tCdhjxH0mKEbsIA')",
                     }}
                   />
-                  <div
-                    className={`relative ${glassPanel} px-6 py-4 flex items-center gap-4 group-hover:-translate-y-2 transition-transform`}
-                  >
-                    <span className="material-symbols-outlined text-[#775a19]">location_on</span>
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-widest">
-                       
-                      </p>
-                      <p className="text-[#444748] text-sm">Gurugram, Haryana</p>
-                    </div>
-                  </div>
+            
                 </div>
               </ScrollReveal>
 
               {/* Contact Details */}
               <ScrollReveal variant="fade-up" delay={300}>
-                <div className="flex flex-col gap-6 p-6 border border-[#c4c7c7]/20">
+                <div className="flex flex-col gap-6 p-6 border border-border-light/20">
                   <div className="flex flex-col gap-2">
                     <h3
                       style={{ fontFamily: "'Playfair Display', serif" }}
@@ -169,14 +159,14 @@ export default function Contact() {
                     </h3>
                     <div className="flex flex-col gap-2">
                       <a
-                        className="text-lg text-[#775a19] hover:text-black transition-colors flex items-center gap-4"
+                        className="text-lg text-primary hover:text-charcoal transition-colors flex items-center gap-4"
                         href="mailto:krishansy1@gmail.com"
                       >
                         <span className="material-symbols-outlined text-[20px]">mail</span>
                         krishansy1@gmail.com
                       </a>
                       <a
-                        className="text-lg text-[#444748] hover:text-black transition-colors flex items-center gap-4"
+                        className="text-lg text-charcoal/80 hover:text-charcoal transition-colors flex items-center gap-4"
                         href="tel:+919910905448"
                       >
                         <span className="material-symbols-outlined text-[20px]">call</span>
@@ -185,7 +175,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="h-px bg-[#ffdea5] w-full" />
+                  <div className="h-px bg-accent w-full" />
 
                
                 </div>
@@ -208,11 +198,11 @@ export default function Contact() {
                 <div className={`flex flex-col items-center text-center p-6 ${glassPanel} rounded-xl h-full justify-center`}>
                   <span
                     style={{ fontFamily: "'Playfair Display', serif" }}
-                    className="text-[40px] font-bold text-[#775a19]"
+                    className="text-[40px] font-bold text-primary"
                   >
                     {renderMetricValue(m.value)}
                   </span>
-                  <span className="text-xs font-semibold tracking-widest text-[#444748] mt-2 uppercase">
+                  <span className="text-xs font-semibold tracking-widest text-charcoal/70 mt-2 uppercase">
                     {m.label}
                   </span>
                 </div>

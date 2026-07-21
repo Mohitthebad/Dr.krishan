@@ -41,9 +41,9 @@ const AWARDS = [
     footer: "RECIPIENT: DR. K. SINGH",
     footerIcon: "verified",
     bg: "bg-white",
-    borderColor: "border-[#775a19]",
-    accent: "text-[#775a19]",
-    accentBorder: "border-[#775a19]",
+    borderColor: "border-primary",
+    accent: "text-primary",
+    accentBorder: "border-primary",
   },
   {
     id: 1,
@@ -53,10 +53,10 @@ const AWARDS = [
     text: "Recognized for aligning HR metrics with bottom-line business outcomes in a highly competitive sector.",
     footer: "HR EXCELLENCE BOARD",
     footerIcon: "stars",
-    bg: "bg-[#f5f3f3]",
-    borderColor: "border-[#fed488]",
-    accent: "text-[#fed488]",
-    accentBorder: "border-[#fed488]",
+    bg: "bg-white",
+    borderColor: "border-secondary",
+    accent: "text-secondary",
+    accentBorder: "border-secondary",
   },
   {
     id: 2,
@@ -66,10 +66,10 @@ const AWARDS = [
     text: "Inducted into the Global Elite Circle for pioneering digital transformation in human resources.",
     footer: "INTERNATIONAL HR SUMMIT",
     footerIcon: "tonality",
-    bg: "bg-[#e4e2e2]",
-    borderColor: "border-[#747878]",
-    accent: "text-[#747878]",
-    accentBorder: "border-[#747878]",
+    bg: "bg-white",
+    borderColor: "border-accent",
+    accent: "text-accent",
+    accentBorder: "border-accent",
   },
 ];
 
@@ -104,14 +104,14 @@ export default function ProjectsAndAwards() {
   const prevAward = () => setActiveAwardIndex((i) => (i - 1 + totalAwards) % totalAwards);
 
   return (
-    <div className="bg-[#fbf9f8] text-[#1b1c1c] font-sans selection:bg-[#fed488] selection:text-[#785a1a] min-h-screen">
+    <div className="bg-background-soft text-charcoal font-sans selection:bg-accent/30 selection:text-charcoal min-h-screen">
       <main className="py-20">
         {/* Section: Projects */}
         <section id="projects" className="px-8 md:px-16 max-w-[1140px] mx-auto mb-20">
           <ScrollReveal variant="fade-up">
-            <div className="mb-6 flex flex-col md:flex-row md:items-end justify-between border-b border-[#775a19]/20 pb-4">
+            <div className="mb-6 flex flex-col md:flex-row md:items-end justify-between border-b border-primary/20 pb-4">
               <div>
-                <span className="text-xs tracking-widest font-semibold text-[#775a19] mb-2 block">
+                <span className="text-xs tracking-widest font-semibold text-accent mb-2 block">
                   STRATEGIC ARCHITECTURE
                 </span>
                 <h2
@@ -154,7 +154,7 @@ export default function ProjectsAndAwards() {
                       src={p.src}
                     />
                     <div className="absolute bottom-6 left-6 z-20">
-                      <span className="bg-[#fbf9f8]/90 backdrop-blur px-3 py-1 text-[10px] font-bold tracking-widest text-black uppercase">
+                      <span className="bg-background-soft/90 backdrop-blur px-3 py-1 text-[10px] font-bold tracking-widest text-black uppercase">
                         {p.tag}
                       </span>
                     </div>
@@ -162,14 +162,14 @@ export default function ProjectsAndAwards() {
                   <div className="flex flex-col gap-2 flex-grow">
                     <h3
                       style={{ fontFamily: "'Playfair Display', serif" }}
-                      className="text-2xl font-semibold text-black group-hover:text-[#775a19] transition-colors"
+                      className="text-2xl font-semibold text-black group-hover:text-primary transition-colors"
                     >
                       {p.title}
                     </h3>
-                    <p className="text-[#444748] max-w-md flex-grow">{p.text}</p>
+                    <p className="text-charcoal/80 max-w-md flex-grow">{p.text}</p>
                     <div className="mt-2 flex items-center gap-2">
-                      <div className="h-px w-8 bg-[#775a19]" />
-                      <span className="text-[11px] font-bold tracking-tighter text-[#775a19] uppercase italic">
+                      <div className="h-px w-8 bg-primary" />
+                      <span className="text-[11px] font-bold tracking-tighter text-primary uppercase italic">
                         {p.status}
                       </span>
                     </div>
@@ -186,29 +186,29 @@ export default function ProjectsAndAwards() {
             {/* Left Content */}
             <div className="lg:col-span-5 mb-8 lg:mb-0">
               <ScrollReveal variant="slide-left">
-                <span className="text-xs tracking-widest font-semibold text-[#ffdea5] mb-4 block">
+                <span className="text-xs tracking-widest font-semibold text-accent mb-4 block">
                   DISTINCTIONS
                 </span>
                 <h2
                   style={{ fontFamily: "'Playfair Display', serif" }}
-                  className="text-[32px] md:text-[48px] font-semibold text-[#fbf9f8] mb-6 leading-tight"
+                  className="text-[32px] md:text-[48px] font-semibold text-background-soft mb-6 leading-tight"
                 >
                   Recognition of Leadership
                 </h2>
-                <p className="text-lg text-[#e4e2e2]/80 mb-6">
+                <p className="text-lg text-border-light/80 mb-6">
                   A chronicle of professional excellence, awarded by industry boards for
                   pioneering human-centric business strategies and executive impact.
                 </p>
                 <div className="flex gap-4">
                   <button
                     onClick={prevAward}
-                    className="p-3 border border-[#e4e2e2]/30 text-[#fbf9f8] rounded-full hover:bg-[#ffdea5] hover:text-black transition-all cursor-pointer"
+                    className="p-3 border border-border-light/30 text-background-soft rounded-full hover:bg-accent hover:text-black transition-all cursor-pointer"
                   >
                     <span className="material-symbols-outlined">arrow_back</span>
                   </button>
                   <button
                     onClick={nextAward}
-                    className="p-3 border border-[#e4e2e2]/30 text-[#fbf9f8] rounded-full hover:bg-[#ffdea5] hover:text-black transition-all cursor-pointer"
+                    className="p-3 border border-border-light/30 text-background-soft rounded-full hover:bg-accent hover:text-black transition-all cursor-pointer"
                   >
                     <span className="material-symbols-outlined">arrow_forward</span>
                   </button>
@@ -252,9 +252,9 @@ export default function ProjectsAndAwards() {
                           >
                             {award.title}
                           </h3>
-                          <p className="text-[#444748] text-base md:text-lg leading-relaxed">{award.text}</p>
+                          <p className="text-charcoal/80 text-base md:text-lg leading-relaxed">{award.text}</p>
                         </div>
-                        <div className="border-t border-[#c4c7c7]/30 pt-4 flex justify-between items-center">
+                        <div className="border-t border-border-light/30 pt-4 flex justify-between items-center">
                           <span className="text-sm md:text-base text-black tracking-widest font-bold">
                             {award.footer}
                           </span>
