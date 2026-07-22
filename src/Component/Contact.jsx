@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import ScrollReveal from "./ScrollReveal";
 import CountUp from "./CountUp";
 
@@ -135,15 +134,17 @@ export default function Contact() {
 
             {/* Info Sidebar (Right) */}
             <div className="lg:col-span-5 flex flex-col gap-8">
-              {/* Interactive Lottie Animation */}
+              {/* Glass Interactive Map */}
               <ScrollReveal variant="scale-up" delay={200}>
-                <div className="relative overflow-hidden h-[300px] w-full rounded-xl bg-card-bg/60 border border-border-light flex items-center justify-center shadow-sm p-4">
-                  <DotLottieReact
-                    src="https://lottie.host/2d4c9141-a301-48c9-8cd9-3ddc7c3a1006/pHpkkmqKuF.lottie"
-                    loop
-                    autoplay
-                    className="w-full h-full object-contain"
+                <div className="relative group overflow-hidden h-[300px] w-full rounded-xl bg-border-light/20 border border-border-light flex items-center justify-center shadow-sm">
+                  <div
+                    className="absolute inset-0 grayscale contrast-125 opacity-50 transition-all duration-700 group-hover:scale-110 group-hover:opacity-70 bg-cover bg-center"
+                    style={{
+                      backgroundImage:
+                        "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBhQDX3OQNaT4JoGW_G2TtHC3aS6iZLc5QBlQ7NiI4EDJULU9I5DpiPF9xTP_oW4h0uJ-2wMvIiBIbx1hre7d-gk7bm7zAjN-f-rXcRZFwZItkHmMZsKLe85CpnCr7DLD7Yhxgq7_N2IuBpzGlMAkn3k-Yf8HGOLx46MCveHa1JuLHZnM_-rfpEGqqHdHG1nclre-2u-Ak2Pp-sX9qEz-YmYhoNkYytpexKxCtLNBVQe1-jXb802tm9nJYq3rw4tCdhjxH0mKEbsIA')",
+                    }}
                   />
+            
                 </div>
               </ScrollReveal>
 
