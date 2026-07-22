@@ -116,7 +116,7 @@ export default function HRAdvisory() {
               </span>
               <h2
                 style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-[48px] font-bold leading-[1.1] tracking-tight mt-2 text-black"
+                className="text-[48px] font-bold leading-[1.1] tracking-tight mt-2 text-charcoal"
               >
                 HR Advisory
               </h2>
@@ -131,11 +131,11 @@ export default function HRAdvisory() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {INITIATIVES.map((init, idx) => (
             <ScrollReveal key={init.title} variant="scale-up" delay={idx * 100}>
-              <MouseFollowCard className="p-8 rounded-lg shadow-sm border border-white/30 bg-white/40 backdrop-blur-xl hover:shadow-md hover:border-primary transition-all duration-300 group h-full">
+              <MouseFollowCard className="p-8 rounded-lg shadow-sm border border-border-light bg-card-bg/60 backdrop-blur-xl hover:shadow-md hover:border-primary transition-all duration-300 group h-full">
                 <div>
                   <div className="flex justify-between items-start mb-6">
-                    <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
-                      <span className="material-symbols-outlined text-white text-2xl">{init.icon}</span>
+                    <div className="w-12 h-12 bg-black dark:bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                      <span className="material-symbols-outlined text-white dark:text-primary text-2xl">{init.icon}</span>
                     </div>
                     <span className="text-[10px] tracking-widest font-bold uppercase text-primary bg-primary/10 px-3 py-1 rounded-full">
                       {init.highlight}
@@ -143,7 +143,7 @@ export default function HRAdvisory() {
                   </div>
                   <h3
                     style={{ fontFamily: "'Playfair Display', serif" }}
-                    className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors"
+                    className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors text-charcoal"
                   >
                     {init.title}
                   </h3>

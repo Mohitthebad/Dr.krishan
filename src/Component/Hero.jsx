@@ -14,11 +14,6 @@ export default function ExecutivePortfolio() {
     const handleScroll = () => {
       const y = window.scrollY;
       setScrolled(y > 100);
-      if (heroBgRef.current && y < window.innerHeight) {
-        const zoom = 1.15 + y * 0.0003;
-        const parallax = y * 0.4;
-        heroBgRef.current.style.transform = `scale(${zoom}) translateY(${parallax}px)`;
-      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -29,39 +24,25 @@ export default function ExecutivePortfolio() {
   };
 
   return (
-    <div className="bg-background-soft text-charcoal selection:bg-accent/30 selection:text-charcoal font-sans overflow-x-hidden">
+    <div className="bg-background-soft text-charcoal selection:bg-accent/30 selection:text-white font-sans overflow-x-hidden">
       <main>
         {/* Cinematic Hero Section */}
         <section
           id="hero"
           className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black"
         >
-          <div className="absolute inset-0 z-0 overflow-hidden">
+          <div className="absolute inset-x-0 bottom-0 top-[80px] z-0 overflow-hidden bg-[#222]">
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80 z-10" />
             <img
               ref={heroBgRef}
               alt="Dr. Krishan Singh Portrait"
-              className="w-full h-full object-cover object-center scale-[1.15] will-change-transform"
+              className="w-full h-full object-contain object-center will-change-transform"
               style={{ transition: "transform 0.6s cubic-bezier(0.16,1,0.3,1)" }}
               src={image1}
               />
           </div>
 
-          <div className="relative z-20 text-center px-8 md:px-16 max-w-5xl">
-            <div className="mb-4 overflow-hidden">
-              <h1
-                style={{ fontFamily: "'Playfair Display', serif" }}
-                className=" bg-transparent text-[56px] md:text-[96px] text-white leading-none tracking-tight animate-[fadeUp_1.2s_cubic-bezier(0.16,1,0.3,1)_0.2s_forwards] opacity-0"
-              >
-                Dr. Krishan Singh
-              </h1>
-            </div>
-            <div className="overflow-hidden">
-              <p className="text-xs tracking-[0.5em] text-accent uppercase font-semibold animate-[fadeUp_1.2s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards] opacity-0">
-                Transformative HR Leader
-              </p>
-            </div>
-          </div>
+         
 
           <div
             onClick={scrollToBio}
@@ -93,10 +74,10 @@ export default function ExecutivePortfolio() {
                   </span>
                   <h2
                     style={{ fontFamily: "'Playfair Display', serif" }}
-                    className="text-[32px] md:text-[44px] text-black leading-tight"
+                    className="text-[32px] md:text-[44px] text-charcoal leading-tight"
                   >
-                    Proven Leadership Backed by <br className="hidden lg:block" />
-                    Measurable Global Impact.
+                    Leadership That Built Industries  <br className="hidden lg:block" />
+                   Coaching That Builds Leaders
                   </h2>
                 </div>
               </ScrollReveal>
@@ -104,7 +85,7 @@ export default function ExecutivePortfolio() {
               <ScrollReveal variant="fade-up" delay={200}>
                 <div className="prose prose-lg max-w-none">
                   <p className="text-lg text-charcoal/80 mb-6 leading-relaxed">
-                    With over three decades of leadership, Dr. Krishan Singh has delivered massive, measurable outcomes across complex global industries. He spearheaded the human capital infrastructure for a <strong>$1.2 Billion greenfield industrial facility</strong> from inception to full scale, successfully led cross-border HR integration for acquisitions across <strong>India, Dubai, Thailand, and South Africa</strong>, and digitized talent management systems for <strong>45,000+ employees</strong>.
+                    With more than three decades of global leadership experience, Dr. Krishan Singh has led large-scale industrial transformations, built high-performing organizations, and successfully managed complex people strategies across multiple countries. Today, he combines that real-world executive experience with executive coaching, leadership mentoring, and organizational consulting to help leaders unlock their full potential and create lasting business impact.
                   </p>
                   <p className="text-lg text-charcoal/80 mb-6 leading-relaxed">
                     A champion of organizational stability and business continuity, Dr. Singh has negotiated key long-term wage settlements and maintained <strong>100% industrial harmony</strong> across multiple high-stakes manufacturing plants.
@@ -114,13 +95,13 @@ export default function ExecutivePortfolio() {
 
               {/* Highlighted Quote */}
               <ScrollReveal variant="scale-up" delay={300}>
-                <div className="relative py-12 px-8 my-8 border-l-4 border-primary bg-border-light/20 shadow-sm">
+                <div className="relative py-12 px-8 my-8 border-l-4 border-primary bg-card-bg shadow-sm">
                   <span className="material-symbols-outlined text-primary/30 text-6xl absolute top-4 right-4">
                     format_quote
                   </span>
                   <blockquote
                     style={{ fontFamily: "'Playfair Display', serif" }}
-                    className="text-2xl italic text-black leading-relaxed relative z-10"
+                    className="text-2xl italic text-charcoal leading-relaxed relative z-10"
                   >
                     "True leadership is measured not by consultant jargon, but by the tangible stability, growth, and alignment we bring to enterprises."
                   </blockquote>
@@ -132,7 +113,7 @@ export default function ExecutivePortfolio() {
                   <div>
                     <span
                       style={{ fontFamily: "'Playfair Display', serif" }}
-                      className="block text-4xl font-bold text-black"
+                      className="block text-4xl font-bold text-charcoal"
                     >
                       <CountUp end={30} suffix="+" />
                     </span>
@@ -143,7 +124,7 @@ export default function ExecutivePortfolio() {
                   <div>
                     <span
                       style={{ fontFamily: "'Playfair Display', serif" }}
-                      className="block text-4xl font-bold text-black"
+                      className="block text-4xl font-bold text-charcoal"
                     >
                       <CountUp end={200} suffix="+" />
                     </span>
@@ -154,7 +135,7 @@ export default function ExecutivePortfolio() {
                   <div>
                     <span
                       style={{ fontFamily: "'Playfair Display', serif" }}
-                      className="block text-4xl font-bold text-black"
+                      className="block text-4xl font-bold text-charcoal"
                     >
                       <CountUp end={75} />
                     </span>
@@ -165,7 +146,7 @@ export default function ExecutivePortfolio() {
                   <div>
                     <span
                       style={{ fontFamily: "'Playfair Display', serif" }}
-                      className="block text-4xl font-bold text-black"
+                      className="block text-4xl font-bold text-charcoal"
                     >
                       <CountUp end={48} />
                     </span>
@@ -202,20 +183,13 @@ export default function ExecutivePortfolio() {
               </ScrollReveal>
 
               <ScrollReveal variant="fade-up" delay={300}>
-                <div
-                  style={{
-                    backdropFilter: "blur(20px) saturate(180%)",
-                    WebkitBackdropFilter: "blur(20px) saturate(180%)",
-                    backgroundColor: "rgba(255,255,255,0.7)",
-                  }}
-                  className="p-8 rounded-xl shadow-sm border border-border-light/20"
-                >
-                  <h3 className="text-xs text-black tracking-widest mb-6 border-b border-border-light/30 pb-4 uppercase font-semibold">
+                <div className="p-8 rounded-xl shadow-sm border border-border-light bg-card-bg backdrop-blur-md">
+                  <h3 className="text-xs text-charcoal tracking-widest mb-6 border-b border-border-light pb-4 uppercase font-semibold">
                     Consulting Verticals
                   </h3>
                   <div className="flex flex-col gap-5">
                     <div>
-                      <h4 className="font-bold text-black text-sm flex items-center gap-2">
+                      <h4 className="font-bold text-charcoal text-sm flex items-center gap-2">
                         <span className="w-2 h-2 bg-primary rotate-45 shrink-0" />
                         Executive Coaching
                       </h4>
@@ -224,7 +198,7 @@ export default function ExecutivePortfolio() {
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-black text-sm flex items-center gap-2">
+                      <h4 className="font-bold text-charcoal text-sm flex items-center gap-2">
                         <span className="w-2 h-2 bg-primary rotate-45 shrink-0" />
                         Industrial Relations Advisory
                       </h4>
@@ -233,7 +207,7 @@ export default function ExecutivePortfolio() {
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-black text-sm flex items-center gap-2">
+                      <h4 className="font-bold text-charcoal text-sm flex items-center gap-2">
                         <span className="w-2 h-2 bg-primary rotate-45 shrink-0" />
                         HR Advisory
                       </h4>

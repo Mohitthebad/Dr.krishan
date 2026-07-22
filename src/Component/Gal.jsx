@@ -104,7 +104,7 @@ export default function ExecutiveGallery() {
           <div className="max-w-4xl">
             <h1
               style={{ fontFamily: "'Playfair Display', serif" }}
-              className="text-[48px] leading-[1.1] tracking-tight font-bold text-black mb-4"
+              className="text-[48px] leading-[1.1] tracking-tight font-bold text-charcoal mb-4"
             >
               Visual Legacy
             </h1>
@@ -130,17 +130,11 @@ export default function ExecutiveGallery() {
 
           {/* Sticky Sidebar */}
           <aside id="experience" className="lg:w-1/3 relative">
-            <div
-              style={{
-                backdropFilter: "saturate(180%) blur(20px)",
-                backgroundColor: "rgba(255,255,255,0.7)",
-              }}
-              className="sticky top-32 p-6 border border-l border-border-light/10"
-            >
+            <div className="sticky top-32 p-6 border border-border-light bg-card-bg backdrop-blur-xl rounded-lg shadow-sm">
               <ScrollReveal variant="fade-up">
                 <h2
                   style={{ fontFamily: "'Playfair Display', serif" }}
-                  className="text-2xl font-semibold text-black mb-4"
+                  className="text-2xl font-semibold text-charcoal mb-4"
                 >
                   Career Milestones
                 </h2>
@@ -151,13 +145,13 @@ export default function ExecutiveGallery() {
                     <div className="flex gap-4">
                       <div className="flex flex-col items-center">
                         <div className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
-                        <div className={`w-px bg-black/10 ${m.rail}`} />
+                        <div className={`w-px bg-border-light ${m.rail}`} />
                       </div>
                       <div>
                         <span className="text-xs tracking-widest font-semibold text-primary">
                           {m.year}
                         </span>
-                        <h3 className="text-lg font-bold text-black">{m.title}</h3>
+                        <h3 className="text-lg font-bold text-charcoal">{m.title}</h3>
                         <p className="text-charcoal/80">{m.text}</p>
                       </div>
                     </div>

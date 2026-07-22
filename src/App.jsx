@@ -71,7 +71,8 @@ const App = () => {
       {/* Circular Back to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg border border-border-light/20 transition-all duration-500 cursor-pointer active:scale-95 ${
+        aria-label="Back to Top"
+        className={`fixed bottom-8 right-8 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-card-bg shadow-lg border border-border-light transition-all duration-500 cursor-pointer active:scale-95 ${
           showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
         }`}
       >
@@ -81,7 +82,7 @@ const App = () => {
             cx="24"
             cy="24"
             r="20"
-            className="stroke-gray-100 fill-none"
+            className="stroke-border-light fill-none"
             strokeWidth="2"
           />
           <circle
@@ -94,7 +95,7 @@ const App = () => {
             strokeDashoffset={2 * Math.PI * 20 * (1 - scrollProgress / 100)}
           />
         </svg>
-        <span className="material-symbols-outlined text-black text-xl z-10">
+        <span className="material-symbols-outlined text-charcoal text-xl z-10">
           arrow_upward
         </span>
       </button>

@@ -1,5 +1,6 @@
 import React from "react";
 import signatureImg from "../assets/signature.png";
+import { useTheme } from "../context/ThemeContext";
 
 const DEFAULT_NAV_LINKS = ["Overview", "Experience", "Awards", "Coaching"];
 const DEFAULT_CONNECT_LINKS = ["LinkedIn", "Executive Bio", "Privacy Policy"];
@@ -39,8 +40,10 @@ export default function Footer({
   connectLinks = DEFAULT_CONNECT_LINKS,
   year = new Date().getFullYear(),
 }) {
+  const { theme } = useTheme();
+
   return (
-    <footer className="bg-border-light/20 border-t border-border-light/30 w-full mt-20">
+    <footer className="bg-card-bg/40 border-t border-border-light w-full mt-20">
       <div className=" max-w-[1140px] mx-auto px-8 md:px-16 py-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start mb-12">
           <div className="md:col-span-5">
@@ -49,7 +52,7 @@ export default function Footer({
               alt="Dr. Krishan Singh Signature"
               className="h-10 md:h-12 w-auto object-contain mb-4"
               style={{
-                filter: "invert(1)",
+                filter: theme === "dark" ? "invert(1)" : "none",
               }}
             />
             <p className="text-charcoal/80 max-w-sm leading-relaxed">{description}</p>

@@ -40,7 +40,7 @@ const AWARDS = [
     text: "For exceptional contribution to organizational restructuring and value creation during the transition period.",
     footer: "RECIPIENT: DR. K. SINGH",
     footerIcon: "verified",
-    bg: "bg-white",
+    bg: "bg-card-bg",
     borderColor: "border-primary",
     accent: "text-primary",
     accentBorder: "border-primary",
@@ -53,7 +53,7 @@ const AWARDS = [
     text: "Recognized for aligning HR metrics with bottom-line business outcomes in a highly competitive sector.",
     footer: "HR EXCELLENCE BOARD",
     footerIcon: "stars",
-    bg: "bg-white",
+    bg: "bg-card-bg",
     borderColor: "border-secondary",
     accent: "text-secondary",
     accentBorder: "border-secondary",
@@ -66,7 +66,7 @@ const AWARDS = [
     text: "Inducted into the Global Elite Circle for pioneering digital transformation in human resources.",
     footer: "INTERNATIONAL HR SUMMIT",
     footerIcon: "tonality",
-    bg: "bg-white",
+    bg: "bg-card-bg",
     borderColor: "border-accent",
     accent: "text-accent",
     accentBorder: "border-accent",
@@ -116,7 +116,7 @@ export default function ProjectsAndAwards() {
                 </span>
                 <h2
                   style={{ fontFamily: "'Playfair Display', serif" }}
-                  className="text-[32px] md:text-[48px] font-semibold text-black"
+                  className="text-[32px] md:text-[48px] font-semibold text-charcoal"
                 >
                   Global Initiatives
                 </h2>
@@ -124,13 +124,13 @@ export default function ProjectsAndAwards() {
               <div className="hidden md:flex gap-4">
               <button
                 onClick={() => scrollSlider(-400)}
-                className="w-12 h-12 rounded-full border border-[#747878] flex items-center justify-center hover:bg-black hover:text-white transition-all"
+                className="w-12 h-12 rounded-full border border-border-light text-charcoal flex items-center justify-center hover:bg-primary hover:text-white transition-all cursor-pointer"
               >
                 <span className="material-symbols-outlined">chevron_left</span>
               </button>
               <button
                 onClick={() => scrollSlider(400)}
-                className="w-12 h-12 rounded-full border border-[#747878] flex items-center justify-center hover:bg-black hover:text-white transition-all"
+                className="w-12 h-12 rounded-full border border-border-light text-charcoal flex items-center justify-center hover:bg-primary hover:text-white transition-all cursor-pointer"
               >
                 <span className="material-symbols-outlined">chevron_right</span>
               </button>
@@ -146,7 +146,7 @@ export default function ProjectsAndAwards() {
             {PROJECTS.map((p, idx) => (
               <ScrollReveal key={p.id} variant="fade-up" delay={idx * 150} className="min-w-full md:min-w-[45%] flex-shrink-0 snap-start">
                 <div className="group cursor-pointer h-full flex flex-col">
-                  <div className="relative aspect-[16/10] overflow-hidden mb-4">
+                  <div className="relative aspect-[16/10] overflow-hidden mb-4 rounded-lg">
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10" />
                     <img
                       className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 group-hover:scale-105 transition-transform duration-700"
@@ -154,7 +154,7 @@ export default function ProjectsAndAwards() {
                       src={p.src}
                     />
                     <div className="absolute bottom-6 left-6 z-20">
-                      <span className="bg-background-soft/90 backdrop-blur px-3 py-1 text-[10px] font-bold tracking-widest text-black uppercase">
+                      <span className="bg-card-bg/90 backdrop-blur px-3 py-1 text-[10px] font-bold tracking-widest text-charcoal uppercase rounded">
                         {p.tag}
                       </span>
                     </div>
@@ -162,7 +162,7 @@ export default function ProjectsAndAwards() {
                   <div className="flex flex-col gap-2 flex-grow">
                     <h3
                       style={{ fontFamily: "'Playfair Display', serif" }}
-                      className="text-2xl font-semibold text-black group-hover:text-primary transition-colors"
+                      className="text-2xl font-semibold text-charcoal group-hover:text-primary transition-colors"
                     >
                       {p.title}
                     </h3>
@@ -181,7 +181,7 @@ export default function ProjectsAndAwards() {
         </section>
 
         {/* Section: Awards (Animated Card Stack) */}
-        <section id="awards" className="bg-black py-20 overflow-hidden">
+        <section id="awards" className="bg-black dark:bg-card-bg/50 border-t border-border-light py-20 overflow-hidden">
           <div className="px-8 md:px-16 max-w-[1140px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Content */}
             <div className="lg:col-span-5 mb-8 lg:mb-0">
@@ -191,24 +191,24 @@ export default function ProjectsAndAwards() {
                 </span>
                 <h2
                   style={{ fontFamily: "'Playfair Display', serif" }}
-                  className="text-[32px] md:text-[48px] font-semibold text-background-soft mb-6 leading-tight"
+                  className="text-[32px] md:text-[48px] font-semibold text-white dark:text-charcoal mb-6 leading-tight"
                 >
                   Recognition of Leadership
                 </h2>
-                <p className="text-lg text-border-light/80 mb-6">
+                <p className="text-lg text-border-light/80 dark:text-charcoal/80 mb-6">
                   A chronicle of professional excellence, awarded by industry boards for
                   pioneering human-centric business strategies and executive impact.
                 </p>
                 <div className="flex gap-4">
                   <button
                     onClick={prevAward}
-                    className="p-3 border border-border-light/30 text-background-soft rounded-full hover:bg-accent hover:text-black transition-all cursor-pointer"
+                    className="p-3 border border-border-light/30 text-white dark:text-charcoal rounded-full hover:bg-accent hover:text-black transition-all cursor-pointer"
                   >
                     <span className="material-symbols-outlined">arrow_back</span>
                   </button>
                   <button
                     onClick={nextAward}
-                    className="p-3 border border-border-light/30 text-background-soft rounded-full hover:bg-accent hover:text-black transition-all cursor-pointer"
+                    className="p-3 border border-border-light/30 text-white dark:text-charcoal rounded-full hover:bg-accent hover:text-black transition-all cursor-pointer"
                   >
                     <span className="material-symbols-outlined">arrow_forward</span>
                   </button>
@@ -229,7 +229,7 @@ export default function ProjectsAndAwards() {
                     return (
                       <div
                         key={award.id}
-                        className={`absolute w-[320px] md:w-[430px] h-[280px] md:h-[350px] ${award.bg} rounded-lg shadow-2xl p-6 border-t-8 ${award.borderColor} flex flex-col justify-between`}
+                        className={`absolute w-[320px] md:w-[430px] h-[280px] md:h-[350px] ${award.bg} rounded-lg shadow-2xl p-6 border-t-8 ${award.borderColor} flex flex-col justify-between border border-border-light`}
                         style={{
                           ...style,
                           transition:
@@ -244,18 +244,18 @@ export default function ProjectsAndAwards() {
                             >
                               {award.icon}
                             </span>
-                            <span className="text-xs md:text-sm text-[#747878] font-bold">{award.year}</span>
+                            <span className="text-xs md:text-sm text-charcoal/60 font-bold">{award.year}</span>
                           </div>
                           <h3
                             style={{ fontFamily: "'Playfair Display', serif" }}
-                            className="text-black mb-2 text-2xl md:text-3xl font-semibold"
+                            className="text-charcoal mb-2 text-2xl md:text-3xl font-semibold"
                           >
                             {award.title}
                           </h3>
                           <p className="text-charcoal/80 text-base md:text-lg leading-relaxed">{award.text}</p>
                         </div>
                         <div className="border-t border-border-light/30 pt-4 flex justify-between items-center">
-                          <span className="text-sm md:text-base text-black tracking-widest font-bold">
+                          <span className="text-sm md:text-base text-charcoal tracking-widest font-bold">
                             {award.footer}
                           </span>
                           <div

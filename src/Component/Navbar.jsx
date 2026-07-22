@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import signatureImg from "../assets/signature.png";
+import { useTheme } from "../context/ThemeContext";
 
 const NAV_ITEMS = [
   { label: "Overview", href: "#hero" },
@@ -11,6 +12,7 @@ const NAV_ITEMS = [
 ];
 
 export default function Navbar() {
+  const { theme, toggleTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,7 +30,6 @@ export default function Navbar() {
         const el = document.getElementById(section);
         if (el) {
           const rect = el.getBoundingClientRect();
-          // If the top of the section is near or above the top of viewport
           if (rect.top <= 120) {
             currentSection = section;
           }
@@ -48,7 +49,7 @@ export default function Navbar() {
     const el = document.getElementById(id);
     if (el) {
       setMenuOpen(false);
-      const offset = 80; // height of header
+      const offset = 80;
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = el.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -80,7 +81,7 @@ export default function Navbar() {
             alt="Dr. Krishan Singh Signature"
             className="h-15 md:h-15 w-auto object-contain transition-all duration-300"
             style={{
-              filter: scrolled ? "invert(1)" : "none",
+              filter: theme === "dark" ? "invert(1)" : (scrolled ? "invert(1)" : "none"),
             }}
           />
         </a>
@@ -115,32 +116,63 @@ export default function Navbar() {
               </a>
             );
           })}
+
           <a
             href="#contact"
             onClick={(e) => handleNavClick(e, "#contact")}
             className={`px-5 py-2.5 text-[10px] tracking-widest font-bold uppercase transition-all duration-300 border ${
               scrolled
-                ? "bg-black text-white border-black hover:bg-primary hover:border-primary"
+                ? "bg-primary text-white border-primary hover:bg-black hover:border-black dark:bg-accent dark:text-black dark:border-accent"
                 : "bg-white text-black border-white hover:bg-transparent hover:text-white"
             }`}
           >
             Contact
           </a>
-        </nav>
 
-        {/* Mobile Menu Trigger */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="lg:hidden focus:outline-none"
-        >
-          <span
-            className={`material-symbols-outlined text-2xl transition-colors ${
-              scrolled || menuOpen ? "text-black" : "text-white"
+          {/* Theme Switcher Button */}
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle Theme"
+            title={theme === "dark" ? "Switch to White Theme" : "Switch to Black Theme"}
+            className={`p-2.5 rounded-full border transition-all duration-300 flex items-center justify-center cursor-pointer ${
+              scrolled
+                ? "border-border-light text-charcoal hover:bg-black/5 dark:hover:bg-white/10"
+                : "border-white/30 text-white hover:bg-white/10"
             }`}
           >
-            {menuOpen ? "close" : "menu"}
-          </span>
-        </button>
+            <span className="material-symbols-outlined text-lg">
+              {theme === "dark" ? "light_mode" : "dark_mode"}
+            </span>
+          </button>
+        </nav>
+
+        {/* Mobile Controls */}
+        <div className="flex items-center gap-4 lg:hidden">
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle Theme"
+            className={`p-2 rounded-full border transition-all ${
+              scrolled || menuOpen ? "border-border-light text-charcoal" : "border-white/30 text-white"
+            }`}
+          >
+            <span className="material-symbols-outlined text-xl">
+              {theme === "dark" ? "light_mode" : "dark_mode"}
+            </span>
+          </button>
+
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="focus:outline-none"
+          >
+            <span
+              className={`material-symbols-outlined text-2xl transition-colors ${
+                scrolled || menuOpen ? "text-charcoal" : "text-white"
+              }`}
+            >
+              {menuOpen ? "close" : "menu"}
+            </span>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation Drawer */}
@@ -157,7 +189,7 @@ export default function Navbar() {
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
               className={`text-lg tracking-widest font-semibold uppercase ${
-                isActive ? "text-primary scale-105" : "text-charcoal/80 hover:text-black"
+                isActive ? "text-primary scale-105" : "text-charcoal/80 hover:text-charcoal"
               } transition-all`}
             >
               {item.label}
@@ -167,7 +199,7 @@ export default function Navbar() {
         <a
           href="#contact"
           onClick={(e) => handleNavClick(e, "#contact")}
-          className="px-8 py-3 bg-black text-white text-xs tracking-widest font-bold uppercase hover:bg-primary transition-all"
+          className="px-8 py-3 bg-primary text-white text-xs tracking-widest font-bold uppercase hover:bg-black transition-all"
         >
           Contact
         </a>

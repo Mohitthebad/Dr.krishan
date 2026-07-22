@@ -70,13 +70,13 @@ const CERTIFICATIONS = [
 
 const ACADEMICS = [
   { title: "Ph.D. in Human Resources Accounting", sub: "Doctoral Research" },
-  { title: "Master of Personnel Management", sub: "University of Pune (A+ Grade)" },
+  { title: "Master of Personnel Management", sub: "University of Pune " },
   { title: "Post Graduate Diploma in Labour Law", sub: "Indian Law Institute, New Delhi" },
   { title: "Bachelor of Commerce (College Topper)", sub: "University of Delhi" },
 ];
 
 const glassPanel =
-  "bg-white/40 backdrop-blur-xl border border-white/30 transition-transform duration-[0.4s] ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1";
+  "bg-card-bg/60 backdrop-blur-xl border border-border-light transition-transform duration-[0.4s] ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1";
 
 export default function ExecutiveCoaching() {
   return (
@@ -91,7 +91,7 @@ export default function ExecutiveCoaching() {
               </span>
               <h2
                 style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-[48px] font-bold leading-[1.1] tracking-tight mt-2"
+                className="text-[48px] font-bold leading-[1.1] tracking-tight mt-2 text-charcoal"
               >
                 Executive Coaching &amp; Mentorship
               </h2>
@@ -115,7 +115,7 @@ export default function ExecutiveCoaching() {
             </ScrollReveal>
             {/* ICF Badge Floating */}
             <ScrollReveal variant="scale-up" delay={450} className="absolute -bottom-10 -left-10">
-              <div className="w-40 h-40 rounded-full shadow-2xl overflow-hidden border border-white/30 bg-white/40 backdrop-blur-xl">
+              <div className="w-40 h-40 rounded-full shadow-2xl overflow-hidden border border-border-light bg-card-bg/80 backdrop-blur-xl">
                 <img
                   className="w-full h-full object-cover"
                   alt="ICF Associate Certified Coach Badge"
@@ -131,7 +131,7 @@ export default function ExecutiveCoaching() {
           <div className="flex items-center justify-between mb-6 border-b border-border-light/20 pb-4">
             <h3
               style={{ fontFamily: "'Playfair Display', serif" }}
-              className="text-2xl font-semibold"
+              className="text-2xl font-semibold text-charcoal"
             >
               Coaching Expertise
             </h3>
@@ -141,19 +141,19 @@ export default function ExecutiveCoaching() {
             {EXPERTISE_CARDS.map((card, idx) => (
               <ScrollReveal key={card.title} variant="fade-up" delay={idx * 150}>
                 <div className={`${glassPanel} p-6 flex flex-col gap-4 hover:border-primary group h-full`}>
-                  <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
-                    <span className="material-symbols-outlined text-white">{card.icon}</span>
+                  <div className="w-12 h-12 bg-black dark:bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
+                    <span className="material-symbols-outlined text-white dark:text-primary">{card.icon}</span>
                   </div>
                   <h4
                     style={{ fontFamily: "'Playfair Display', serif" }}
-                    className="text-xl font-semibold"
+                    className="text-xl font-semibold text-charcoal"
                   >
                     {card.title}
                   </h4>
                   <p className="text-charcoal/80">{card.text}</p>
                   <ul className="mt-auto pt-4 space-y-2">
                     {card.tags.map((tag) => (
-                      <li key={tag} className="flex items-center gap-2 text-[11px] font-semibold">
+                      <li key={tag} className="flex items-center gap-2 text-[11px] font-semibold text-charcoal/90">
                         <span className="w-1.5 h-1.5 bg-primary rounded-sm" /> {tag}
                       </li>
                     ))}
@@ -166,15 +166,15 @@ export default function ExecutiveCoaching() {
 
         {/* Frameworks & Facilitation: Asymmetric Layout */}
         <section className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-20 overflow-hidden">
-          <div className="md:col-span-4 bg-black p-6 flex flex-col justify-center gap-4">
+          <div className="md:col-span-4 bg-black dark:bg-card-bg border border-border-light p-6 flex flex-col justify-center gap-4">
             <ScrollReveal variant="slide-left">
               <h3
                 style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-white text-2xl font-semibold mb-2"
+                className="text-white dark:text-charcoal text-2xl font-semibold mb-2"
               >
                 Methodology &amp; Frameworks
               </h3>
-              <p className="text-border-light/70">
+              <p className="text-border-light/70 dark:text-charcoal/70">
                 Rooted in the gold standard of the International Coaching Federation (ICF),
                 Dr. Singh leverages data-driven insights to spark transformation.
               </p>
@@ -188,7 +188,7 @@ export default function ExecutiveCoaching() {
                     {fw.icon}
                   </span>
                   <div>
-                    <h5 className="font-bold text-black mb-1">{fw.title}</h5>
+                    <h5 className="font-bold text-charcoal mb-1">{fw.title}</h5>
                     <p className="text-charcoal/80 text-sm">{fw.text}</p>
                   </div>
                 </div>
@@ -205,7 +205,7 @@ export default function ExecutiveCoaching() {
               <div className="flex items-center justify-between mb-6 border-b border-border-light/20 pb-4">
                 <h3
                   style={{ fontFamily: "'Playfair Display', serif" }}
-                  className="text-2xl font-semibold"
+                  className="text-2xl font-semibold text-charcoal"
                 >
                   Professional Certifications
                 </h3>
@@ -218,7 +218,7 @@ export default function ExecutiveCoaching() {
                   <div
                     className={`p-4 border-l h-full ${
                       cert.accent ? "border-primary" : "border-border-light"
-                    } bg-border-light/20`}
+                    } bg-card-bg`}
                   >
                     <span
                       className={`font-bold text-xs uppercase tracking-widest block mb-1 ${
@@ -227,7 +227,7 @@ export default function ExecutiveCoaching() {
                     >
                       {cert.label}
                     </span>
-                    <h6 className="font-bold">{cert.title}</h6>
+                    <h6 className="font-bold text-charcoal">{cert.title}</h6>
                   </div>
                 </ScrollReveal>
               ))}
@@ -240,7 +240,7 @@ export default function ExecutiveCoaching() {
               <div className={`${glassPanel} p-6 rounded-lg`}>
                 <h3
                   style={{ fontFamily: "'Playfair Display', serif" }}
-                  className="text-xl font-semibold mb-6 flex items-center gap-2"
+                  className="text-xl font-semibold mb-6 flex items-center gap-2 text-charcoal"
                 >
                   <span className="material-symbols-outlined text-primary">school</span>
                   Academic Foundation
@@ -249,7 +249,7 @@ export default function ExecutiveCoaching() {
                   {ACADEMICS.map((item, i) => (
                     <React.Fragment key={item.title}>
                       <div>
-                        <p className="font-bold text-black">{item.title}</p>
+                        <p className="font-bold text-charcoal">{item.title}</p>
                         <p className="text-sm text-charcoal/80">{item.sub}</p>
                       </div>
                       {i < ACADEMICS.length - 1 && (

@@ -33,16 +33,16 @@ const METRICS = [
 ];
 
 const REDRESSAL_FOCUS = [
-  "Grievance Redressal Frameworks",
-  "Labour Code Readiness",
-  "Statutory Compliance Audits",
-  "Productivity Enhancement",
+  "Employee Grievance Resolution",
+  "Labour Law & Code Compliance",
+  "Statutory Audit & Risk Management",
+  "Workforce Productivity Optimization",
 ];
 
 const REGIONS = ["INDIA", "DUBAI", "THAILAND", "SOUTH AFRICA"];
 
 const glassEffect =
-  "bg-white/30 backdrop-blur-xl border border-white/30";
+  "bg-card-bg/60 backdrop-blur-xl border border-border-light";
 
 export default function IndustrialRelations() {
   return (
@@ -58,7 +58,7 @@ export default function IndustrialRelations() {
                 </span>
                 <h1
                   style={{ fontFamily: "'Playfair Display', serif" }}
-                  className="text-[48px] font-bold mb-4 leading-none tracking-tight"
+                  className="text-[48px] font-bold mb-4 leading-none tracking-tight text-charcoal"
                 >
                   Industrial Relations <br />
                   Advisory
@@ -72,13 +72,13 @@ export default function IndustrialRelations() {
               <ScrollReveal variant="scale-up" delay={200}>
                 <div className={`${glassEffect} p-8 rounded-lg shadow-2xl shadow-black/5 relative overflow-hidden group`}>
                   <div className="absolute top-0 right-0 p-4 opacity-10">
-                    <span className="material-symbols-outlined text-6xl">factory</span>
+                    <span className="material-symbols-outlined text-6xl text-charcoal">factory</span>
                   </div>
                   <h3
                     style={{ fontFamily: "'Playfair Display', serif" }}
                     className="text-lg font-bold text-primary mb-4"
                   >
-                    Redressal Focus
+                   Industrial Relations Excellence
                   </h3>
                   <ul className="space-y-3">
                     {REDRESSAL_FOCUS.map((item) => (
@@ -101,7 +101,7 @@ export default function IndustrialRelations() {
             <ScrollReveal variant="fade-up">
               <h2
                 style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-2xl font-semibold mb-6 border-b border-border-light/30 pb-4"
+                className="text-2xl font-semibold mb-6 border-b border-border-light/30 pb-4 text-charcoal"
               >
                 Core Expertise
               </h2>
@@ -109,13 +109,13 @@ export default function IndustrialRelations() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {EXPERTISE_CARDS.map((card, idx) => (
                 <ScrollReveal key={card.title} variant="fade-up" delay={idx * 100}>
-                  <div className="bg-white p-8 border border-border-light/10 shadow-sm hover:shadow-md transition-shadow h-full">
+                  <div className="bg-card-bg p-8 border border-border-light shadow-sm hover:shadow-md transition-shadow h-full">
                     <div className="w-12 h-12 bg-primary/10 flex items-center justify-center mb-4">
                       <span className="material-symbols-outlined text-primary">{card.icon}</span>
                     </div>
                     <h4
                       style={{ fontFamily: "'Playfair Display', serif" }}
-                      className="text-xl font-semibold mb-2"
+                      className="text-xl font-semibold mb-2 text-charcoal"
                     >
                       {card.title}
                     </h4>
@@ -127,12 +127,12 @@ export default function IndustrialRelations() {
               {/* Full Width Achievement Highlight */}
               <div className="col-span-1 md:col-span-2">
                 <ScrollReveal variant="scale-up" delay={200}>
-                  <div className={`${glassEffect} p-10 border border-border-light/20 relative`}>
+                  <div className={`${glassEffect} p-10 border border-border-light relative`}>
                     <div className="flex flex-col md:flex-row items-center gap-6">
                       <div className="text-center md:text-left">
                         <h3
                           style={{ fontFamily: "'Playfair Display', serif" }}
-                          className="text-2xl font-semibold mb-2"
+                          className="text-2xl font-semibold mb-2 text-charcoal"
                         >
                           Global Operations
                         </h3>
@@ -164,20 +164,20 @@ export default function IndustrialRelations() {
             <div className="sticky top-28 space-y-6">
               {/* Performance Metrics */}
               <ScrollReveal variant="fade-up" delay={200}>
-                <div className="bg-black p-8 text-white shadow-xl">
+                <div className="bg-black dark:bg-card-bg border border-border-light p-8 text-white dark:text-charcoal shadow-xl">
                   <span className="text-accent text-xs font-semibold tracking-widest block mb-4 uppercase">
                     Proven Impact
                   </span>
                   <div className="space-y-6">
                     {METRICS.map((m, i) => (
-                      <div key={m.label} className={i > 0 ? "border-t border-white/20 pt-6" : ""}>
+                      <div key={m.label} className={i > 0 ? "border-t border-white/20 dark:border-border-light pt-6" : ""}>
                         <h4
                           style={{ fontFamily: "'Playfair Display', serif" }}
                           className="text-[40px] font-bold leading-none text-accent"
                         >
                           {m.value}
                         </h4>
-                        <p className="text-xs font-semibold text-white/60 uppercase tracking-widest mt-1">
+                        <p className="text-xs font-semibold text-white/60 dark:text-charcoal/70 uppercase tracking-widest mt-1">
                           {m.label}
                         </p>
                       </div>
@@ -186,11 +186,9 @@ export default function IndustrialRelations() {
                 </div>
               </ScrollReveal>
 
-             
-
               {/* Image with Narrative */}
               <ScrollReveal variant="scale-up" delay={400}>
-                <div className="relative h-64 overflow-hidden rounded-lg group">
+                <div className="relative h-64 overflow-hidden rounded-lg group border border-border-light">
                   <img
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     alt="Industrial manufacturing plant interior"
@@ -208,51 +206,7 @@ export default function IndustrialRelations() {
         </section>
 
         {/* Case Study Highlight */}
-        <section className="mt-20 pt-20 border-t border-border-light/30">
-          <div className="flex flex-col md:flex-row gap-8 items-center">
-            <div className="md:w-1/2">
-              <ScrollReveal variant="slide-left">
-                <h2
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                  className="text-[48px] font-bold mb-4"
-                >
-                  Strategic Resolution &amp; Settlements
-                </h2>
-                <p className="text-lg text-charcoal/80 mb-6 leading-relaxed">
-                  Dr. Singh has successfully negotiated complex long-term settlements,
-                  resolved major industrial disputes, and extinguished potential strikes
-                  before they impacted production. By establishing unified compliance
-                  governance across multiple manufacturing units, he minimized corporate
-                  risk while strengthening business continuity in volatile markets.
-                </p>
-                <button className="bg-black text-white px-8 py-3 text-xs font-semibold tracking-widest flex items-center gap-2 hover:bg-primary transition-colors">
-                  VIEW LEADERSHIP HISTORY
-                  <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                </button>
-              </ScrollReveal>
-            </div>
-            <div className="md:w-1/2 grid grid-cols-2 gap-4">
-              <div className="aspect-square bg-border-light/20 relative group overflow-hidden">
-                <ScrollReveal variant="scale-up" delay={200} className="w-full h-full">
-                  <img
-                    className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-                    alt="Business handshake over a boardroom table"
-                    src={handshake}
-                  />
-                </ScrollReveal>
-              </div>
-              <div className="aspect-square bg-border-light/20 relative group overflow-hidden mt-8">
-                <ScrollReveal variant="scale-up" delay={400} className="w-full h-full">
-                  <img
-                    className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-                    alt="Flat paper pens display stand"
-                    src={pens}
-                  />
-                </ScrollReveal>
-              </div>
-            </div>
-          </div>
-        </section>
+       
       </main>
       <style>{`
         .material-symbols-outlined {

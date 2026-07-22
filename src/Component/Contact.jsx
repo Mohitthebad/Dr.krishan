@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import ScrollReveal from "./ScrollReveal";
 import CountUp from "./CountUp";
 
@@ -11,7 +12,7 @@ const METRICS = [
 ];
 
 const glassPanel =
-  "bg-white/70 backdrop-blur-xl border border-white/30";
+  "bg-card-bg/70 backdrop-blur-xl border border-border-light";
 
 function Field({ label, children }) {
   const [focused, setFocused] = useState(false);
@@ -24,7 +25,8 @@ function Field({ label, children }) {
       <label
         className="text-xs font-semibold uppercase tracking-widest transition-all duration-200"
         style={{
-          color: active ? "#0F5C5E" : "rgba(31,41,55,0.7)",
+          color: active ? "var(--color-primary)" : "var(--color-charcoal)",
+          opacity: active ? 1 : 0.7,
           transform: active ? "translateY(-2px)" : "translateY(0)",
         }}
       >
@@ -59,7 +61,7 @@ export default function Contact() {
               </span>
               <h1
                 style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-[48px] lg:text-[64px] font-bold max-w-3xl leading-tight"
+                className="text-[48px] lg:text-[64px] font-bold max-w-3xl leading-tight text-charcoal"
               >
                 Get in Touch
               </h1>
@@ -80,14 +82,14 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <Field label="Full Name">
                       <input
-                        className="bg-transparent border-0 border-b border-border-light py-4 focus:ring-0 focus:border-primary transition-all text-lg placeholder:text-charcoal/40"
+                        className="bg-transparent border-0 border-b border-border-light py-4 focus:ring-0 focus:border-primary transition-all text-lg placeholder:text-charcoal/40 text-charcoal"
                         placeholder="Johnathan Doe"
                         type="text"
                       />
                     </Field>
                     <Field label="Organization">
                       <input
-                        className="bg-transparent border-0 border-b border-border-light py-4 focus:ring-0 focus:border-primary transition-all text-lg placeholder:text-charcoal/40"
+                        className="bg-transparent border-0 border-b border-border-light py-4 focus:ring-0 focus:border-primary transition-all text-lg placeholder:text-charcoal/40 text-charcoal"
                         placeholder="Global Enterprises Inc."
                         type="text"
                       />
@@ -96,24 +98,24 @@ export default function Contact() {
 
                   <Field label="Email Address">
                     <input
-                      className="bg-transparent border-0 border-b border-border-light py-4 focus:ring-0 focus:border-primary transition-all text-lg placeholder:text-charcoal/40"
+                      className="bg-transparent border-0 border-b border-border-light py-4 focus:ring-0 focus:border-primary transition-all text-lg placeholder:text-charcoal/40 text-charcoal"
                       placeholder="j.doe@executive.com"
                       type="email"
                     />
                   </Field>
 
                   <Field label="Inquiry Type">
-                    <select className="bg-transparent border-0 border-b border-border-light py-4 focus:ring-0 focus:border-primary transition-all text-lg text-charcoal/80 appearance-none">
-                      <option>Executive Leadership Consulting</option>
-                      <option>Board Membership Opportunity</option>
-                      <option>Keynote Speaking &amp; Panels</option>
-                      <option>Strategic Mentorship</option>
+                    <select className="bg-card-bg border-0 border-b border-border-light py-4 focus:ring-0 focus:border-primary transition-all text-lg text-charcoal appearance-none">
+                      <option className="bg-card-bg text-charcoal">Executive Leadership Consulting</option>
+                      <option className="bg-card-bg text-charcoal">Board Membership Opportunity</option>
+                      <option className="bg-card-bg text-charcoal">Keynote Speaking &amp; Panels</option>
+                      <option className="bg-card-bg text-charcoal">Strategic Mentorship</option>
                     </select>
                   </Field>
 
                   <Field label="Your Message">
                     <textarea
-                      className="bg-transparent border-0 border-b border-border-light py-4 focus:ring-0 focus:border-primary transition-all text-lg placeholder:text-charcoal/40 resize-none"
+                      className="bg-transparent border-0 border-b border-border-light py-4 focus:ring-0 focus:border-primary transition-all text-lg placeholder:text-charcoal/40 text-charcoal resize-none"
                       placeholder="How can we collaborate on your vision?"
                       rows="4"
                     />
@@ -122,7 +124,7 @@ export default function Contact() {
                   <div className="mt-6">
                     <button
                       type="submit"
-                      className="bg-black text-accent text-xs font-semibold px-12 py-5 tracking-[0.2em] uppercase hover:shadow-[0px_20px_40px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all active:scale-95 cursor-pointer"
+                      className="bg-primary dark:bg-accent text-white dark:text-black text-xs font-semibold px-12 py-5 tracking-[0.2em] uppercase hover:shadow-[0px_20px_40px_rgba(0,0,0,0.1)] hover:bg-black transition-all active:scale-95 cursor-pointer"
                     >
                       SEND MESSAGE
                     </button>
@@ -133,27 +135,25 @@ export default function Contact() {
 
             {/* Info Sidebar (Right) */}
             <div className="lg:col-span-5 flex flex-col gap-8">
-              {/* Glass Interactive Map */}
+              {/* Interactive Lottie Animation */}
               <ScrollReveal variant="scale-up" delay={200}>
-                <div className="relative group overflow-hidden h-[300px] w-full rounded-xl bg-border-light/20 border border-border-light/30 flex items-center justify-center shadow-sm">
-                  <div
-                    className="absolute inset-0 grayscale contrast-125 opacity-50 transition-all duration-700 group-hover:scale-110 group-hover:opacity-70 bg-cover bg-center"
-                    style={{
-                      backgroundImage:
-                        "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBhQDX3OQNaT4JoGW_G2TtHC3aS6iZLc5QBlQ7NiI4EDJULU9I5DpiPF9xTP_oW4h0uJ-2wMvIiBIbx1hre7d-gk7bm7zAjN-f-rXcRZFwZItkHmMZsKLe85CpnCr7DLD7Yhxgq7_N2IuBpzGlMAkn3k-Yf8HGOLx46MCveHa1JuLHZnM_-rfpEGqqHdHG1nclre-2u-Ak2Pp-sX9qEz-YmYhoNkYytpexKxCtLNBVQe1-jXb802tm9nJYq3rw4tCdhjxH0mKEbsIA')",
-                    }}
+                <div className="relative overflow-hidden h-[300px] w-full rounded-xl bg-card-bg/60 border border-border-light flex items-center justify-center shadow-sm p-4">
+                  <DotLottieReact
+                    src="https://lottie.host/2d4c9141-a301-48c9-8cd9-3ddc7c3a1006/pHpkkmqKuF.lottie"
+                    loop
+                    autoplay
+                    className="w-full h-full object-contain"
                   />
-            
                 </div>
               </ScrollReveal>
 
               {/* Contact Details */}
               <ScrollReveal variant="fade-up" delay={300}>
-                <div className="flex flex-col gap-6 p-6 border border-border-light/20">
+                <div className="flex flex-col gap-6 p-6 border border-border-light bg-card-bg rounded-xl">
                   <div className="flex flex-col gap-2">
                     <h3
                       style={{ fontFamily: "'Playfair Display', serif" }}
-                      className="text-xl font-semibold"
+                      className="text-xl font-semibold text-charcoal"
                     >
                       Direct Lines
                     </h3>
