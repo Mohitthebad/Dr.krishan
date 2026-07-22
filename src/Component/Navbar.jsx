@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { label: "Industrial Relations Advisory", href: "#industrial-relations" },
   { label: "HR Advisory", href: "#hr-advisory" },
   { label: "Awards & Projects", href: "#awards" },
+  { label: "Our Venture", href: "#venture" },
   { label: "Gallery", href: "#gallery" },
 ];
 
@@ -23,7 +24,7 @@ export default function Navbar() {
       setScrolled(y > 50);
 
       // Simple scroll spy logic
-      const sections = ["hero", "coaching", "industrial-relations", "hr-advisory", "awards", "gallery", "contact"];
+      const sections = ["hero", "coaching", "industrial-relations", "hr-advisory", "awards", "venture", "gallery", "contact"];
       let currentSection = "hero";
       
       for (const section of sections) {

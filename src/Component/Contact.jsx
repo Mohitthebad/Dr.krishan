@@ -134,7 +134,6 @@ export default function Contact() {
 
             {/* Info Sidebar (Right) */}
             <div className="lg:col-span-5 flex flex-col gap-8">
-             
 
               {/* Contact Details */}
               <ScrollReveal variant="fade-up" delay={300}>

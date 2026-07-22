@@ -5,6 +5,7 @@ import Experience from './Component/Experience'
 import IndustrialRelations from './Component/IndustrialRelations'
 import HRAdvisory from './Component/HRAdvisory'
 import Awards from './Component/pro'
+import OurVenture from './Component/OurVenture'
 import Gal from './Component/Gal'
 import Contact from './Component/Contact'
 import Footer from './Component/Footer'
@@ -59,6 +60,9 @@ const App = () => {
       </div>
       <div id="awards">
         <Awards />
+      </div>
+      <div id="venture">
+        <OurVenture />
       </div>
       <div id="gallery">
         <Gal />
