@@ -5,7 +5,7 @@ import { useTheme } from "../context/ThemeContext";
 const NAV_ITEMS = [
   { label: "Overview", href: "#hero" },
   { label: "Executive Coaching", href: "#coaching" },
-  { label: "Industrial Relations Advisory", href: "#industrial-relations" },
+  { label: "IR Advisory", href: "#industrial-relations" },
   { label: "HR Advisory", href: "#hr-advisory" },
   { label: "Awards & Projects", href: "#awards" },
   { label: "Our Venture", href: "#venture" },
@@ -96,7 +96,7 @@ export default function Navbar() {
                 key={item.label}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className={`text-xs tracking-wider font-semibold transition-all duration-300 uppercase relative py-1 ${
+                className={`text-xs tracking-wider font-semibold transition-all duration-300 uppercase relative py-1 whitespace-nowrap ${
                   isActive
                     ? scrolled
                       ? "text-primary"
@@ -189,7 +189,7 @@ export default function Navbar() {
               key={item.label}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
-              className={`text-lg tracking-widest font-semibold uppercase ${
+              className={`text-lg tracking-widest font-semibold uppercase whitespace-nowrap ${
                 isActive ? "text-primary scale-105" : "text-charcoal/80 hover:text-charcoal"
               } transition-all`}
             >
