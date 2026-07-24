@@ -32,14 +32,14 @@ export default function ExecutivePortfolio() {
           className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black"
         >
           <div className="absolute inset-x-0 bottom-0 top-[80px] z-0 overflow-hidden bg-[#222]">
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80 z-10" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80 z-10 pointer-events-none" />
             <img
               ref={heroBgRef}
               alt="Dr. Krishan Singh Portrait"
-              className="w-full h-full object-contain object-center will-change-transform"
+              className="w-full h-full object-cover object-top will-change-transform"
               style={{ transition: "transform 0.6s cubic-bezier(0.16,1,0.3,1)" }}
               src={image1}
-              />
+            />
           </div>
 
          
@@ -88,7 +88,7 @@ export default function ExecutivePortfolio() {
                     With more than three decades of global leadership experience, Dr. Krishan Singh has led large-scale industrial transformations, built high-performing organizations, and successfully managed complex people strategies across multiple countries. Today, he combines that real-world executive experience with executive coaching, leadership mentoring, and organizational consulting to help leaders unlock their full potential and create lasting business impact.
                   </p>
                   <p className="text-lg text-charcoal/80 mb-6 leading-relaxed">
-                    A champion of organizational stability and business continuity, Dr. Singh has negotiated key long-term wage settlements and maintained <strong>100% industrial harmony</strong> across multiple high-stakes manufacturing plants.
+                    A champion of organizational stability and business continuity, Dr. Singh has negotiated key long-term wage settlements and maintained <strong>Connected industrial harmony</strong> across multiple high-stakes manufacturing plants.
                   </p>
                 </div>
               </ScrollReveal>
@@ -137,10 +137,10 @@ export default function ExecutivePortfolio() {
                       style={{ fontFamily: "'Playfair Display', serif" }}
                       className="block text-4xl font-bold text-charcoal"
                     >
-                      <CountUp end={75} />
+                      <CountUp end={75} suffix="+" />
                     </span>
                     <span className="text-[10px] text-charcoal/70 tracking-widest uppercase font-semibold block mt-1">
-                      Wage &amp; Bonus Settlements
+                       &amp; Bonus Settlements
                     </span>
                   </div>
                   <div>
@@ -148,10 +148,10 @@ export default function ExecutivePortfolio() {
                       style={{ fontFamily: "'Playfair Display', serif" }}
                       className="block text-4xl font-bold text-charcoal"
                     >
-                      <CountUp end={48} />
+                      <CountUp end={48} suffix="+"/>
                     </span>
                     <span className="text-[10px] text-charcoal/70 tracking-widest uppercase font-semibold block mt-1">
-                      Long-Term Settlements
+                      Long-Term Wage Settlements
                     </span>
                   </div>
                   <div className="col-span-2 sm:col-span-1">

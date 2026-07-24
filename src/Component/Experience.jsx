@@ -99,7 +99,7 @@ export default function ExecutiveCoaching() {
               <blockquote className="italic text-2xl font-semibold text-charcoal/80 border-l-4 border-border-light pl-6 my-6">
                 "Every individual possesses the ability to discover solutions through
                 reflection, awareness, and purposeful action. My role is to bridge the gap
-                between theory and real organizational impact."
+                By creating awareness, invoking action, and transforming potential into organizational impact."
               </blockquote>
             </ScrollReveal>
           </div>

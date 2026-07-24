@@ -21,13 +21,6 @@ export default function OurVenture() {
 
         {/* Section Header */}
         <ScrollReveal variant="fade-up">
-          <div className="flex justify-center mb-4">
-            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 text-primary px-5 py-2 text-xs font-semibold tracking-[0.2em] uppercase">
-              <Sparkles size={14} className="text-accent" />
-              OUR ECOSYSTEM
-            </span>
-          </div>
-
           <h2
             style={{ fontFamily: "'Playfair Display', serif" }}
             className="text-center text-[36px] md:text-[48px] font-bold text-charcoal leading-tight"

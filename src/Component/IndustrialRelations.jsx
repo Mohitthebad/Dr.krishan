@@ -27,16 +27,19 @@ const EXPERTISE_CARDS = [
 ];
 
 const METRICS = [
-  { value: "100%", label: "Industrial Harmony Restored" },
-  { value: "75", label: "Wage & Bonus Settlements" },
-  { value: "48", label: "Long-Term Settlements" },
+  { value: "", label: "Industrial Harmony Restored" },
+  { value: "75+", label: "Wage & Bonus Settlements" },
+  { value: "48+", label: "Long-Term Settlements" },
 ];
 
 const REDRESSAL_FOCUS = [
-  "Employee Grievance Resolution",
-  "Labour Law & Code Compliance",
-  "Statutory Audit & Risk Management",
-  "Workforce Productivity Optimization",
+  "Created a Conducive Environment for Industrial Harmony",
+  "Strategic Union Engagement",
+  "Collaborative ER Framework",
+  "HR Audit & Risk Governance ",
+  "Labour Codes & Compliance Excellence ",
+  "Proactive Grievance Resolution",
+  "Enhanced Workforce Productivity ",
 ];
 
 const REGIONS = ["INDIA", "DUBAI", "THAILAND", "SOUTH AFRICA"];
@@ -64,7 +67,7 @@ export default function IndustrialRelations() {
                   Advisory
                 </h1>
                 <p className="text-lg text-charcoal/80 max-w-2xl leading-relaxed">
-                  We help organizations improve productivity, streamline operations, and achieve measurable business outcomes across complex industrial ecosystems.
+                His leadership is defined by his ability to embed trust, transparency, and mutual respect into employee relations. By converting confrontation into collaboration, he has created workplaces where unions, management, and employees coexist as constructive stakeholders in organizational growth. His governanceoriented approach positions Industrial Relations as a strategic enabler of productivity, resilience, and sustainable performance.
                 </p>
               </ScrollReveal>
             </div>

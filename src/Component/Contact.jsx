@@ -158,7 +158,7 @@ export default function Contact() {
                         href="tel:+919910905448"
                       >
                         <span className="material-symbols-outlined text-[20px]">call</span>
-                        +91 99109 05448
+                        +91 9650106003
                       </a>
                     </div>
                   </div>
