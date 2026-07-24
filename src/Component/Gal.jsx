@@ -191,16 +191,14 @@ export default function ExecutiveGallery() {
     <div className="bg-background-soft text-charcoal font-sans overflow-x-hidden min-h-screen py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-10 lg:px-12 max-w-[1440px] mx-auto">
       {/* Header Section */}
       <ScrollReveal variant="fade-up">
-        <div className="max-w-4xl mb-8 md:mb-10">
+        <div className="max-w-4xl  mb-8   md:mb-10">
           <h1
             style={{ fontFamily: "'Playfair Display', serif" }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal tracking-tight mb-3"
+            className="text-3xl sm:text-4xl md:text-5xl  ml-120 font-bold text-charcoal tracking-tight  mb-3"
           >
             Gallery & Honors
           </h1>
-          <p className="text-sm sm:text-base md:text-lg text-charcoal/80 max-w-2xl leading-relaxed">
-            A chronicle of strategic leadership, global summits, prestigious awards, and landmark achievements shaping the executive HR landscape.
-          </p>
+        
         </div>
       </ScrollReveal>
 

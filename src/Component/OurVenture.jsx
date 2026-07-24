@@ -11,7 +11,7 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function OurVenture() {
   return (
-    <section className="relative overflow-hidden py-20 bg-background-soft text-charcoal font-sans transition-colors duration-500">
+    <section className="relative overflow-hidden  bg-background-soft text-charcoal font-sans transition-colors duration-500">
 
       {/* Background Ambient Glow matching theme */}
       <div className="absolute left-0 top-1/4 h-96 w-96 rounded-full bg-primary/10 blur-[120px] pointer-events-none" />

@@ -28,8 +28,8 @@ const EXPERTISE_CARDS = [
 
 const METRICS = [
   { value: "", label: "Industrial Harmony Restored" },
-  { value: "75+", label: "Wage & Bonus Settlements" },
-  { value: "48+", label: "Long-Term Settlements" },
+  { value: "75+", label: " Bonus Settlements" },
+  { value: "48+", label: "Long-Term Wage Settlements" },
 ];
 
 const REDRESSAL_FOCUS = [
