@@ -151,7 +151,7 @@ export default function Contact() {
                         href="mailto:krishansy1@gmail.com"
                       >
                         <span className="material-symbols-outlined text-[20px]">mail</span>
-                        krishansy1@gmail.com
+                        contact@shiftquest.com
                       </a>
                       <a
                         className="text-lg text-charcoal/80 hover:text-charcoal transition-colors flex items-center gap-4"
