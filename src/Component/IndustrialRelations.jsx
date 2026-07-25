@@ -140,9 +140,7 @@ export default function IndustrialRelations() {
                           Global Operations
                         </h3>
                         <p className="text-lg text-charcoal/80 mb-4">
-                          Successfully led HR integration of acquired businesses across India,
-                          Dubai, Thailand, and South Africa, harmonizing diverse cultures and
-                          governance frameworks.
+                          Led the management of seven manufacturing plants, including four across India and three international facilities. Successfully drove HR integration for greenfield operations in Thailand and South Africa while overseeing plant operations, organizational development, cultural alignment with the parent organization, and compliance with local labour laws and regulatory standards.
                         </p>
                         <div className="flex flex-wrap gap-4">
                           {REGIONS.map((region) => (
