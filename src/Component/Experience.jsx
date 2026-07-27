@@ -8,7 +8,7 @@ const EXPERTISE_CARDS = [
     icon: "partner_exchange",
     title: "Executive & Leadership",
     text: "Driving leadership capability and organizational impact through structured journeys and realworld application.",
-    tags: ["EXECUTIVE COACHING", "LEADERSHIP DEVELOPMENT AND HIPO GROWTH "],
+    tags: ["EXECUTIVE COACHING", "LEADERSHIP DEVELOPMENT AND HIGH POTENTIAL EMPLOYEE GROWTH "],
   },
   {
     icon: "trending_up",
