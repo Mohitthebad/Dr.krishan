@@ -85,10 +85,10 @@ export default function ExecutivePortfolio() {
               <ScrollReveal variant="fade-up" delay={200}>
                 <div className="prose prose-lg max-w-none">
                   <p className="text-lg text-charcoal/80 mb-6 leading-relaxed">
-                    With more than three decades of global leadership experience, Dr. Krishan Singh has led large-scale industrial transformations, built high-performing organizations, and successfully managed complex people strategies across multiple countries. Today, he combines that real-world executive experience with executive coaching, leadership mentoring, and organizational consulting to help leaders unlock their full potential and create lasting business impact.
+                    With over three decades of global leadership, Dr. Krishan Singh has driven largescale industrial transformations, built highperforming organizations, and managed complex people strategies across diverse geographies. Today, he channels this executive expertise into consulting, coaching, and mentoring—helping leaders unlock potential and deliver lasting impact.
                   </p>
                   <p className="text-lg text-charcoal/80 mb-6 leading-relaxed">
-                    A champion of organizational stability and business continuity, Dr. Singh has negotiated key long-term wage settlements and maintained <strong>Connected industrial harmony</strong> across multiple high-stakes manufacturing plants.
+                    Renowned for his Industrial Relations acumen, Dr. Singh has resolved complex IR challenges and sustained harmony across highstakes manufacturing plants. His ability to transform confrontational unions into collaborative partners has ensured organizational stability, resilience, and business continuity in volatile environments.
                   </p>
                 </div>
               </ScrollReveal>

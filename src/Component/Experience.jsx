@@ -7,8 +7,8 @@ const EXPERTISE_CARDS = [
   {
     icon: "partner_exchange",
     title: "Executive & Leadership",
-    text: "Driving leadership development and high-potential (HiPo) growth through structured journeys and real-world application.",
-    tags: ["EXECUTIVE COACHING", "LEADERSHIP DEVELOPMENT"],
+    text: "Driving leadership capability and organizational impact through structured journeys and realworld application.",
+    tags: ["EXECUTIVE COACHING", "LEADERSHIP DEVELOPMENT AND HIPO GROWTH "],
   },
   {
     icon: "trending_up",
@@ -44,11 +44,6 @@ const FRAMEWORKS = [
     icon: "partner_exchange",
     title: "Executive Coaching",
     text: "Providing confidential, high-impact guidance for senior executives and C-suite leaders.",
-  },
-  {
-    icon: "policy",
-    title: "Coaching Aligned with ICF Ethics",
-    text: "A commitment to absolute confidentiality and the highest ethical standards of global coaching practice.",
   },
 ];
 
@@ -97,9 +92,7 @@ export default function ExecutiveCoaching() {
               </h2>
               <div className="w-24 h-1 bg-primary mt-4" />
               <blockquote className="italic text-2xl font-semibold text-charcoal/80 border-l-4 border-border-light pl-6 my-6">
-                "Every individual possesses the ability to discover solutions through
-                reflection, awareness, and purposeful action. My role is to bridge the gap
-                By creating awareness, invoking action, and transforming potential into organizational impact."
+                "I believe individuals are naturally resourceful and capable of finding their own best solutions. My role is to create a trusted space for reflection, powerful conversations, and accountabilities that enables leaders to realize their full potential and create meaningful organizational impact"
               </blockquote>
             </ScrollReveal>
           </div>
