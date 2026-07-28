@@ -157,38 +157,8 @@ export default function ExecutiveCoaching() {
           </div>
         </section>
 
-        {/* Frameworks & Facilitation: Asymmetric Layout */}
-        <section className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-20 overflow-hidden">
-          <div className="md:col-span-4 bg-black dark:bg-card-bg border border-border-light p-6 flex flex-col justify-center gap-4">
-            <ScrollReveal variant="slide-left">
-              <h3
-                style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-white dark:text-charcoal text-2xl font-semibold mb-2"
-              >
-                Methodology &amp; Frameworks
-              </h3>
-              <p className="text-border-light/70 dark:text-charcoal/70">
-                Rooted in the gold standard of the International Coaching Federation (ICF),
-                Dr. Singh leverages data-driven insights to spark transformation.
-              </p>
-            </ScrollReveal>
-          </div>
-          <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6 py-6 px-4 relative">
-            {FRAMEWORKS.map((fw, idx) => (
-              <ScrollReveal key={fw.title} variant="fade-up" delay={idx * 100}>
-                <div className="flex items-start gap-4">
-                  <span className="material-symbols-outlined text-primary text-3xl">
-                    {fw.icon}
-                  </span>
-                  <div>
-                    <h5 className="font-bold text-charcoal mb-1">{fw.title}</h5>
-                    <p className="text-charcoal/80 text-sm">{fw.text}</p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </section>
+     
+      
 
         {/* Academic & Professional */}
         <section className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-10">
