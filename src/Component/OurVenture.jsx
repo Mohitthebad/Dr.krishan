@@ -66,10 +66,7 @@ export default function OurVenture() {
                   </p>
 
                   <p className="mt-6 text-charcoal/70 text-sm md:text-base leading-relaxed">
-                    Delivering strategic consulting, digital transformation,
-                    operational excellence, and business growth for ambitious
-                    organizations.
-                  </p>
+                    Empowering leaders and organizations through Executive Coaching, Leadership Mentoring, Investor Relations Advisory, and Strategic HR Consulting.</p>
 
                 </div>
 
@@ -102,22 +99,17 @@ export default function OurVenture() {
 
                     <Feature
                       icon={<Target size={20} />}
-                      title="Strategic Advisory"
+                      title="HR strategic advisory"
                     />
 
                     <Feature
                       icon={<BarChart3 size={20} />}
-                      title="Operational Excellence"
+                      title="Coaching & mentoring"
                     />
 
                     <Feature
                       icon={<Lightbulb size={20} />}
-                      title="Digital Transformation"
-                    />
-
-                    <Feature
-                      icon={<Users size={20} />}
-                      title="Growth Enablement"
+                      title="IR advisory "
                     />
 
                   </div>
