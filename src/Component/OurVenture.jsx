@@ -8,6 +8,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import shiftQuestLogo from "../assets/shiftquest-logo.png";
 
 export default function OurVenture() {
   return (
@@ -48,25 +49,20 @@ export default function OurVenture() {
               {/* Left Brand Panel */}
               <div className="lg:col-span-5 flex items-center justify-center p-8 md:p-12 bg-gradient-to-br from-card-bg via-background-soft to-card-bg border-b lg:border-b-0 lg:border-r border-border-light/60">
 
-                <div className="text-center max-w-sm">
+                <div className="text-center max-w-sm w-full">
 
-                  <div className="w-32 h-32 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-primary to-primary/80 text-white mx-auto mb-6 flex items-center justify-center text-4xl md:text-5xl font-bold font-serif shadow-lg shadow-primary/20 border-2 border-white/20">
-                    SQ
+                  {/* Shift Quest Official Logo */}
+                  <div className="w-full max-w-[320px] md:max-w-[360px] p-4 md:p-5 rounded-2xl bg-white shadow-md border border-slate-200/80 hover:shadow-xl transition-all duration-300 mx-auto mb-6 group overflow-hidden">
+                    <img
+                      src={shiftQuestLogo}
+                      alt="Shift Quest Consulting LLP Logo"
+                      className="w-full h-auto object-contain scale-110 transition-transform duration-500 group-hover:scale-115"
+                    />
                   </div>
 
-                  <h3
-                    style={{ fontFamily: "'Playfair Display', serif" }}
-                    className="text-3xl md:text-4xl font-bold text-charcoal"
-                  >
-                    ShiftQuest
-                  </h3>
-
-                  <p className="mt-2 uppercase tracking-[6px] text-accent font-semibold text-xs md:text-sm">
-                    Consulting
+                  <p className="text-charcoal/70 text-sm md:text-base leading-relaxed">
+                    Empowering leaders and organizations through Executive Coaching, Leadership Mentoring, Investor Relations Advisory, and Strategic HR Consulting.
                   </p>
-
-                  <p className="mt-6 text-charcoal/70 text-sm md:text-base leading-relaxed">
-                    Empowering leaders and organizations through Executive Coaching, Leadership Mentoring, Investor Relations Advisory, and Strategic HR Consulting.</p>
 
                 </div>
 
