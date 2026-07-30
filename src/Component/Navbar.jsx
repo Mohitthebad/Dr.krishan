@@ -80,7 +80,7 @@ export default function Navbar() {
           <img
             src={signatureImg}
             alt="Dr. Krishan Singh Signature"
-            className="h-12 md:h-14 w-auto object-contain transition-all duration-300"
+            className="h-16 md:h-20 w-auto object-contain transition-all duration-300"
             style={{
               filter: theme === "dark" || !scrolled ? "brightness(0) invert(1)" : "brightness(0)",
             }}

@@ -50,7 +50,7 @@ export default function Footer({
             <img
               src={signatureImg}
               alt="Dr. Krishan Singh Signature"
-              className="h-10 md:h-12 w-auto object-contain mb-4"
+              className="h-14 md:h-16 w-auto object-contain mb-4"
               style={{
                 filter: theme === "dark" ? "brightness(0) invert(1)" : "brightness(0)",
               }}

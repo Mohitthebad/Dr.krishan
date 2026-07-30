@@ -109,6 +109,7 @@ export default function Contact() {
                       <option className="bg-card-bg text-charcoal">Board Membership Opportunity</option>
                       <option className="bg-card-bg text-charcoal">Keynote Speaking &amp; Panels</option>
                       <option className="bg-card-bg text-charcoal">Strategic Mentorship</option>
+                      <option className="bg-card-bg text-charcoal">Other</option>
                     </select>
                   </Field>
 
