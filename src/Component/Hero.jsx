@@ -31,28 +31,26 @@ export default function ExecutivePortfolio() {
           id="hero"
           className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black"
         >
-          <div className="absolute inset-x-0 bottom-0 top-[80px] z-0 overflow-hidden bg-[#222]">
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80 z-10 pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 top-[80px] z-0 overflow-hidden bg-black flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 z-10 pointer-events-none" />
             <img
               ref={heroBgRef}
               alt="Dr. Krishan Singh Portrait"
-              className="w-full h-full object-cover object-top will-change-transform"
+              className="w-full h-full object-contain object-center will-change-transform max-h-full"
               style={{ transition: "transform 0.6s cubic-bezier(0.16,1,0.3,1)" }}
               src={image1}
             />
           </div>
 
-         
-
           <div
             onClick={scrollToBio}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 cursor-pointer"
+            className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 cursor-pointer opacity-80 hover:opacity-100 transition-opacity"
           >
-            <span className="text-[9px] tracking-[0.3em] text-white/50 uppercase font-semibold">
+            <span className="text-[9px] tracking-[0.3em] text-white/70 uppercase font-semibold">
               The Legacy
             </span>
             <div className="animate-bounce">
-              <span className="material-symbols-outlined text-accent text-3xl">
+              <span className="material-symbols-outlined text-accent text-2xl">
                 keyboard_arrow_down
               </span>
             </div>
