@@ -126,7 +126,7 @@ export default function ExecutivePortfolio() {
                       style={{ fontFamily: "'Playfair Display', serif" }}
                       className="block text-4xl font-bold text-charcoal"
                     >
-                      <CountUp end={200} suffix="+" />
+                      <CountUp end={150} suffix="+" />
                     </span>
                     <span className="text-[10px] text-charcoal/70 tracking-widest uppercase font-semibold block mt-1">
                       Leaders Coached
