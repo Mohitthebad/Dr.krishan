@@ -76,7 +76,7 @@ export default function ExecutivePortfolio() {
                     style={{ fontFamily: "'Playfair Display', serif" }}
                     className="text-[32px] md:text-[44px] text-charcoal leading-tight"
                   >
-                    Leadership That Built Industries  <br className="hidden lg:block" />
+                    Leadership That Built Organisation  <br className="hidden lg:block" />
                    Coaching That Builds Leaders
                   </h2>
                 </div>
