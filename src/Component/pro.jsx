@@ -24,7 +24,7 @@ const PROJECTS = [
     id: "transformation",
     tag: "Digitalization",
     title: "Workforce Transformation",
-    text: "Implementing AI-driven talent management systems to future-proof 45,000+ employees against industry disruption.",
+    text: "Helping organizations build agile, future-ready workforces through strategic talent management, leadership development, and organizational excellence.",
     status: "Next-Gen Talent",
     alt: "Modern glass staircase in an executive office atrium",
     src: "https://lh3.googleusercontent.com/aida-public/AB6AXuB8OKMLTjbzZd8Jn965876Z3naN5tve5blpCMTsYIztuw9-LQuur-coA5_uVs8c2f5esz12BloEP8Ctd_u6zGF06ukHYiChVfv8VRWA9VmQV6raj3WqrVaevr9qOKgww1AhUQbCs8ebcup0Bj4n7TrqbOCl3NRuM_bH2oXwbgAlLVSJ0BuS-bRzb5vRagEHOI15Kk-eEMzbdl5CTB4r-QIwQAkqlktQcX_N3Ud5pOmUrWfzjlImJwv_fy0RKQzwg0HjXIsQtDaIybQ",
